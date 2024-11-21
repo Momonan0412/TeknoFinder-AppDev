@@ -1,5 +1,74 @@
 [
   {
+    "ContainingType": "AppDev.API.Controllers.ConfessionsController",
+    "Method": "GetAllConfessions",
+    "RelativePath": "api/Confessions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.ConfessionsController",
+    "Method": "CreateConfession",
+    "RelativePath": "api/Confessions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conf",
+        "Type": "AppDev.API.Models.DataTransferObject.Confession.ConfessionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.ConfessionsController",
+    "Method": "GetConfession",
+    "RelativePath": "api/Confessions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetConfession"
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.ConfessionsController",
+    "Method": "DeleteConfession",
+    "RelativePath": "api/Confessions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.ConfessionsController",
+    "Method": "GetAllConfessionsWithId",
+    "RelativePath": "api/Confessions/wID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AppDev.API.Controllers.StudentsController",
     "Method": "GetAllStudents",
     "RelativePath": "api/Students",

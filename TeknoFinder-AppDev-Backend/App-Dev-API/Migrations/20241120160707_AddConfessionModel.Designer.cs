@@ -4,6 +4,7 @@ using AppDev.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDev.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241120160707_AddConfessionModel")]
+    partial class AddConfessionModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,13 +155,13 @@ namespace AppDev.API.Migrations
 
             modelBuilder.Entity("AppDev.API.Models.Entities.Confession", b =>
                 {
-                    b.HasOne("AppDev.API.Models.Entities.Student", "Student")
+                    b.HasOne("AppDev.API.Models.Entities.Student", "student")
                         .WithMany()
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Student");
+                    b.Navigation("student");
                 });
 
             modelBuilder.Entity("AppDev.API.Models.Entities.User", b =>
