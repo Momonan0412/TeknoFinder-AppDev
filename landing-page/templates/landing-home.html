@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TeknoFinder - Navigate CIT-U</title>
 	<link rel="stylesheet" href="../css/landing-home.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Anybody&display=swap" rel="stylesheet">
 </head>
 
@@ -14,15 +15,15 @@
 	<header>
 		<div class="navbar">
 			<div>
-				<img src="../img/teknofinder-word.png"/ height="40px">
+				<img src="../img/teknofinder-word.png" height="40px"/>
 			</div>
 			
 			<nav>
 				<ul>
 					<li><a href="" class="current-page">Home</a></li>
-					<li><a href="">Features</a></li>
-					<li><a href="">About Us</a></li>
-					<li><a href="">Contact Us</a></li>
+					<li><a href="" class="hoverable">Features</a></li>
+					<li><a href="" class="hoverable">About Us</a></li>
+					<li><a href="" class="hoverable">Contact Us</a></li>
 				</ul>
 			</nav>
 			
@@ -33,48 +34,106 @@
 		</div>
 	</header>
     
+	<!-- Get Started Section -->
 	<section class="get-started-section">
-		<div class="hero">
-			<h1>Navigate Your Path, Discover the Beauty of CIT-U</h1>
+		<div class="content">
+			<h1>Navigate Your Path, Discover<br/>the Beauty of CIT-U</h1>
 			<p>
-				TeknoFinder, your guide to CIT-U. Easily find classrooms, buildings, and events with real-time navigation. Explore the campus confidently and never get lost!
+				TeknoFinder, your guide to CIT-U. Easily find classrooms,<br/>
+				buildings, and events with real-time navigation. Explore the<br/>
+				campus confidently and never get lost!
 			</p>
-			<button class="cta-btn">Get Started!</button>
+			<button class="get-started-btn">Get Started !</button>
 		</div>
 	</section>
 
 	<!-- How It Works Section -->
-	<section id="features" class="how-it-works">
-		<h2>How Does TeknoFinder Work?</h2>
+	<section class="how-it-works">
+		<div class="header">
+			<h2>How Does TeknoFinder Work?</h2>
+			<p>
+				Using TeknoFinder is simple and intuitive. Just follow these easy steps<br/>
+				to navigate the CIT-U campus with confidence:
+			</p>
+		</div>
+		
 		<div class="steps">
 			<div class="step">
-				<img src="images/account.png" alt="Create Account">
-				<h3>Create an Account or Log In</h3>
-				<p>Set up your account or access your existing one.</p>
+				<img src="../img/account-img.png" alt="Create Account">
+				<h3>Create an Account<br/>or Log In</h3>
+				
+				<div class="step-set">
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="not-current"></i>
+					<i class="fas fa-circle" id="not-current"></i>
+					<i class="fas fa-circle" id="not-current"></i>
+				</div>
+				
+				<p>Set up your account or access your existing<br/>one.</p>
 			</div>
 			
 			<div class="step">
-				<img src="images/search.png" alt="Search Location">
+				<img src="../img/location-img.png" alt="Search Location">
 				<h3>Search for Your Location</h3>
-				<p>Enter the name of your classroom, building, or event.</p>
+				
+				<div class="step-set">
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="not-current"></i>
+					<i class="fas fa-circle" id="not-current"></i>
+				</div>
+				
+				<p>Enter the name of your classroom, building, or<br/>event.</p>
 			</div>
 		  
 			<div class="step">
-				<img src="images/directions.png" alt="Get Directions">
-				<h3>Get Directions Instantly</h3>
-				<p>Follow real-time maps and step-by-step guidance.</p>
+				<img src="../img/direction-img.png" alt="Get Directions">
+				<h3>Get Directions<br/>Instantly</h3>
+				
+				<div class="step-set">
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="not-current"></i>
+				</div>
+				
+				<p>Follow real-time maps and step-by-step guidance to reach your destination.</p>
 			</div>
 		  
 			<div class="step">
-				<img src="images/explore.png" alt="Explore CIT-U">
+				<img src="../img/citu-img.png" alt="Explore CIT-U">
 				<h3>Navigate and Explore CIT-U</h3>
-				<p>Discover campus facilities, events, and more.</p>
+				
+				<div class="step-set">
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="current"></i>
+					<i class="fas fa-circle" id="current"></i>
+				</div>
+				
+				<p>Discover various campus facilities, upcoming events, and more.</p>
 			</div>
 		</div>
 	</section>
 
-	<!-- Interactive Map Section -->
-	<section id="map" class="interactive-map">
+	<!-- CITU Map Section -->
+	<section class="citu-map-section">
+		<img src="../img/citumap-img.png" alt="Map">
+		<div>
+			<img src="../img/teknofinder-logo.png">
+			<h2>Explore CIT-U with TeknoFinder</h2>
+			<p>
+				Navigate CIT-U effortlessly with our<br/>
+				interactive map. Access key locations, building<br/>
+				information, and real-time event<br/>
+				updates. With TeknoFinder, you’ll always<br/>
+				know where to go!<br/>
+			</p>
+		</div>
+	</section>
+	
+	<!-- Visit Now Section -->
+	<section class="visit-now-section">
 		<img src="images/map.png" alt="Interactive Map">
 		<div>
 			<h2>Explore CIT-U with TeknoFinder</h2>
