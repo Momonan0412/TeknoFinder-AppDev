@@ -12,6 +12,7 @@ namespace AppDev.API.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Waypoint> Waypoints { get; set; }
         public DbSet <Confession> Confessions { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

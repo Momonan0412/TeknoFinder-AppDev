@@ -15,7 +15,21 @@
         NGE,
         GLE,
         RTL,
-        
     }
-    
+    public enum Day
+    {
+        SUNDAY,
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+    }
+    public enum ConfessionContextType
+    {
+        Classroom,
+        Building,
+
+    }
 }

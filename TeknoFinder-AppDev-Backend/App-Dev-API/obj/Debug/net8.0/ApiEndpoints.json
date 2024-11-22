@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "conf",
-        "Type": "AppDev.API.Models.DataTransferObject.Confession.ConfessionDTO",
+        "Type": "AppDev.API.Models.DataTransferObject.Confession.AddConfessionDTO",
         "IsRequired": true
       }
     ],
@@ -61,11 +61,121 @@
   {
     "ContainingType": "AppDev.API.Controllers.ConfessionsController",
     "Method": "GetAllConfessionsWithId",
-    "RelativePath": "api/Confessions/wID",
+    "RelativePath": "api/Confessions/DebugPurposes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.ConfessionsController",
+    "Method": "UpdateConfession",
+    "RelativePath": "api/Confessions/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "confDTO",
+        "Type": "AppDev.API.Models.DataTransferObject.Confession.UpdateConfessionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.SchedulesController",
+    "Method": "GetAllSchedules",
+    "RelativePath": "api/Schedules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.SchedulesController",
+    "Method": "CreateSchedule",
+    "RelativePath": "api/Schedules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scheduleDTO",
+        "Type": "AppDev.API.Models.DataTransferObject.Schedule.ScheduleDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.SchedulesController",
+    "Method": "GetScheduleById",
+    "RelativePath": "api/Schedules/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.SchedulesController",
+    "Method": "DeleteSchedule",
+    "RelativePath": "api/Schedules/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.SchedulesController",
+    "Method": "GetAllSchedulesDebug",
+    "RelativePath": "api/Schedules/Debugging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppDev.API.Controllers.SchedulesController",
+    "Method": "UpdateSchedule",
+    "RelativePath": "api/Schedules/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "schedDTO",
+        "Type": "AppDev.API.Models.DataTransferObject.Schedule.ScheduleDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

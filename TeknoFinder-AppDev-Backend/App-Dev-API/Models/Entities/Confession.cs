@@ -1,15 +1,10 @@
-﻿using AppDev.API.Models.EnumValidation;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using AppDev.API.Models.EnumValidation;
 
 namespace AppDev.API.Models.Entities
 {
-    public enum ConfessionContextType
-    {
-        Classroom,
-        Building,
-        
-    }
+
     public class Confession
     {
         public Guid ConfessionId { get; set; } = Guid.NewGuid();
@@ -20,7 +15,7 @@ namespace AppDev.API.Models.Entities
         public Student Student { get; set; }
 
         [Required]
-
+        [ValidEnum(typeof(ConfessionContextType))]
         public ConfessionContextType ContextType { get; set; }
         [Required]
         public string ContextValue { get; set; }

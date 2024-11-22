@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\confession\\updateconfessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\confession\\updateconfessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\confession\\addconfessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\confession\\addconfessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\confession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\confession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\enumvalidation\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\enumvalidation\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\enumvalidation\\confessioncontextvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\enumvalidation\\confessioncontextvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\controllers\\confessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\controllers\\confessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\user\\adduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\user\\adduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\student\\addstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\student\\addstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\student\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,40 +55,28 @@
       "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\mapper\\studentmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\student\\updatestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\student\\updatestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\confession\\confessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\confession\\confessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\confession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\confession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\enumvalidation\\validenumattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\enumvalidation\\validenumattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\controllers\\waypointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\controllers\\waypointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\entities\\waypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\entities\\waypoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\confession\\getallconfessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\confession\\getallconfessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\models\\datatransferobject\\student\\updatestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\models\\datatransferobject\\student\\updatestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|c:\\users\\acer\\source\\repos\\teknofinder-appdev\\teknofinder-appdev-backend\\app-dev-api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D87449-84FB-42EB-9C02-299ACC90F8FB}|App-Dev-API\\AppDev.API.csproj|solutionrelative:app-dev-api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,188 +86,253 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "StudentMapper.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Mapper\\StudentMapper.cs",
               "RelativeDocumentMoniker": "App-Dev-API\\Models\\Mapper\\StudentMapper.cs",
               "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Mapper\\StudentMapper.cs",
               "RelativeToolTip": "App-Dev-API\\Models\\Mapper\\StudentMapper.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAD4vwoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:16:53.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateStudentDTO.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:16:36.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentDTO.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:59:31.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Confession.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Confession.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\Confession.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Confession.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\Confession.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:41:30.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WaypointsController.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\WaypointsController.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Controllers\\WaypointsController.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\WaypointsController.cs",
-              "RelativeToolTip": "App-Dev-API\\Controllers\\WaypointsController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:35:02.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StudentsController.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\StudentsController.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Controllers\\StudentsController.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\StudentsController.cs",
-              "RelativeToolTip": "App-Dev-API\\Controllers\\StudentsController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:34:52.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\User\\UserDTO.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\User\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\User\\UserDTO.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\User\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:28:25.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ConfessionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\ConfessionDTO.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Confession\\ConfessionDTO.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\ConfessionDTO.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Confession\\ConfessionDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:28:08.585Z",
+              "WhenOpened": "2024-11-22T06:38:10.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Waypoint.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Waypoint.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\Waypoint.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Waypoint.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\Waypoint.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Mapper\\UserMapper.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Mapper\\UserMapper.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Mapper\\UserMapper.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\Mapper\\UserMapper.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:15:55.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Student.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\Student.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Student.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\Student.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAWwCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:15:22.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddUserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\User\\AddUserDTO.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\User\\AddUserDTO.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\User\\AddUserDTO.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\User\\AddUserDTO.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:06:32.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\User.cs",
-              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\User.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T19:03:51.286Z",
+              "WhenOpened": "2024-11-22T06:38:05.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "StudentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Student\\StudentDTO.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:35:13.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateConfessionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\UpdateConfessionDTO.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Confession\\UpdateConfessionDTO.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\UpdateConfessionDTO.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Confession\\UpdateConfessionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:24:21.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddStudentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\AddStudentDTO.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Student\\AddStudentDTO.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\AddStudentDTO.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Student\\AddStudentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:24:13.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateStudentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Student\\UpdateStudentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:24:03.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Confession.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Confession.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\Confession.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Confession.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\Confession.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:11:52.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\User.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\User.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:11:37.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetAllConfessionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\GetAllConfessionDTO.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Confession\\GetAllConfessionDTO.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\GetAllConfessionDTO.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Confession\\GetAllConfessionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:11:23.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Student.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:10:50.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ValidEnumAttribute.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\EnumValidation\\ValidEnumAttribute.cs",
               "RelativeDocumentMoniker": "App-Dev-API\\Models\\EnumValidation\\ValidEnumAttribute.cs",
               "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\EnumValidation\\ValidEnumAttribute.cs",
               "RelativeToolTip": "App-Dev-API\\Models\\EnumValidation\\ValidEnumAttribute.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T18:37:32.182Z",
+              "WhenOpened": "2024-11-22T06:10:32.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Schedule.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Schedule.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Entities\\Schedule.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Entities\\Schedule.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\Entities\\Schedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:07:17.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConfessionContextValidation.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\EnumValidation\\ConfessionContextValidation.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\EnumValidation\\ConfessionContextValidation.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\EnumValidation\\ConfessionContextValidation.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\EnumValidation\\ConfessionContextValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:07:01.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddConfessionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\AddConfessionDTO.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\DataTransferObject\\Confession\\AddConfessionDTO.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\DataTransferObject\\Confession\\AddConfessionDTO.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\DataTransferObject\\Confession\\AddConfessionDTO.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAEwAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:04:34.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\EnumValidation\\Enums.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\EnumValidation\\Enums.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\EnumValidation\\Enums.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\EnumValidation\\Enums.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAxwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:42:34.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "App-Dev-API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwC8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:38:34.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Models\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Models\\Service\\UserService.cs",
+              "RelativeToolTip": "App-Dev-API\\Models\\Service\\UserService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:37:17.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SchedulesController.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\SchedulesController.cs",
+              "RelativeDocumentMoniker": "App-Dev-API\\Controllers\\SchedulesController.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\SchedulesController.cs",
+              "RelativeToolTip": "App-Dev-API\\Controllers\\SchedulesController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T02:52:33.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ConfessionsController.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\ConfessionsController.cs",
               "RelativeDocumentMoniker": "App-Dev-API\\Controllers\\ConfessionsController.cs",
               "ToolTip": "C:\\Users\\acer\\source\\repos\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\Controllers\\ConfessionsController.cs",
               "RelativeToolTip": "App-Dev-API\\Controllers\\ConfessionsController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAYwGsAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAmwGAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:32:28.351Z",
+              "WhenOpened": "2024-11-22T02:52:22.823Z",
               "EditorCaption": ""
             }
           ]
