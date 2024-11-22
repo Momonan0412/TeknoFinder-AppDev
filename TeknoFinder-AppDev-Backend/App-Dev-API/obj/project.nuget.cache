@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QLyJ4sIMB3w=",
+  "dgSpecHash": "j7LlajNOXzs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\avril\\OneDrive\\Desktop\\API\\App-Dev-API\\AppDev.API.csproj",
+  "projectFilePath": "C:\\Users\\avril\\OneDrive\\Documents\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\AppDev.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\avril\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\avril\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

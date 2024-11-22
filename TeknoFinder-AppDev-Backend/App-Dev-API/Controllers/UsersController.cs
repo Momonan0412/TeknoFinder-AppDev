@@ -29,7 +29,7 @@ namespace AppDev.API.Controllers
             var user = applicationDbContext.Users.Find(id);
             return (user is null) ? Ok() : NotFound();
         }
-        [HttpPost]
+        //[HttpPost]
         //public IActionResult AddUser(AddUserDTO addUserDTO)
         //{
         //    var newUser = UserMapper.ConvertFromDTO(addUserDTO);

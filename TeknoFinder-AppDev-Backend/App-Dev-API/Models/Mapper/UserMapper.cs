@@ -29,5 +29,15 @@ namespace AppDev.API.Models.Mapper
                 IsActive = dto.IsActive,
             };
         }
+        public static User ConvertFromDTO(AddUserDTO dto)
+        {
+            Debug.WriteLine($"UserDTO in Mapper: {dto.ToString()}");
+            return new User
+            {
+                Email = dto.Email,
+                Password = dto.Password,
+                IsActive = dto.IsActive,
+            };
+        }
     }
 }

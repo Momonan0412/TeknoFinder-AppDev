@@ -5102,11 +5102,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\avril\\OneDrive\\Desktop\\API\\App-Dev-API\\AppDev.API.csproj",
+      "projectUniqueName": "C:\\Users\\avril\\OneDrive\\Documents\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\AppDev.API.csproj",
       "projectName": "AppDev.API",
-      "projectPath": "C:\\Users\\avril\\OneDrive\\Desktop\\API\\App-Dev-API\\AppDev.API.csproj",
+      "projectPath": "C:\\Users\\avril\\OneDrive\\Documents\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\AppDev.API.csproj",
       "packagesPath": "C:\\Users\\avril\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\avril\\OneDrive\\Desktop\\API\\App-Dev-API\\obj\\",
+      "outputPath": "C:\\Users\\avril\\OneDrive\\Documents\\TeknoFinder-AppDev\\TeknoFinder-AppDev-Backend\\App-Dev-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\avril\\AppData\\Roaming\\NuGet\\NuGet.Config",

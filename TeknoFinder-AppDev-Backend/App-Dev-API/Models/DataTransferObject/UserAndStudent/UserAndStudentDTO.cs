@@ -9,6 +9,6 @@ namespace AppDev.API.Models.DataTransferObject.UserAndStudent
         [Required]
         public StudentDTO StudentDTO { get; set; }
         [Required]
-        public UserDTO UserDTO { get; set; }
+        public AddUserDTO AddUserDTO { get; set; }
     }
 }
