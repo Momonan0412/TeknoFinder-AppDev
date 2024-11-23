@@ -35,6 +35,8 @@ bower_components/
 **/bin/
 **/obj/
 bin/
+**/bin/Debug/
+
 obj/
 out/
 dist/
