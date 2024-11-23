@@ -21,14 +21,14 @@ namespace AppDev.API.Models.Service
             try
             {
                 // Debugging Step
-                Debug.WriteLine($"UserDTO: {userAndStudentDTO.UserDTO.ToString()}");
+                Debug.WriteLine($"UserDTO: {userAndStudentDTO.AddUserDTO.ToString()}");
                 Debug.WriteLine($"StudentDTO: {userAndStudentDTO.StudentDTO.ToString()}");
 
                 var newStudent = StudentMapper.ConvertFromDTO(userAndStudentDTO.StudentDTO);
                 applicationDbContext.Students.Add(newStudent);
                 await applicationDbContext.SaveChangesAsync();
 
-                var newUser = UserMapper.ConvertFromDTO(userAndStudentDTO.UserDTO);
+                var newUser = UserMapper.ConvertFromDTO(userAndStudentDTO.AddUserDTO);
                 newUser.StudentIdentification = newStudent.StudentIdentification; ;
                 applicationDbContext.Users.Add(newUser);
                 await applicationDbContext.SaveChangesAsync();
