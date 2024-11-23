@@ -19,7 +19,21 @@ desktop.ini
 node_modules/
 bower_components/
 
+# Ignore other build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.props
+*.csproj.AssemblyReference.cache
+*.assets.cache
+*.editorconfig
+*.g.cs
+*.json
+
 # Build and Output directories
+**/bin/
+**/obj/
 bin/
 obj/
 out/
@@ -35,6 +49,8 @@ artifacts/
 *.suo
 *.userosscache
 *.sln.docstates
+
+
 
 # IDE specific
 .vscode/
