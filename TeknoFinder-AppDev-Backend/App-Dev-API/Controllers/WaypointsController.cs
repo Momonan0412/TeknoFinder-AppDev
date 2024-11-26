@@ -13,10 +13,7 @@ namespace AppDev.API.Controllers
     {
         private readonly ApplicationDbContext applicationDbContext;
 
-        public WaypointsController(ApplicationDbContext applicationDbContext)
-        {
-            this.applicationDbContext = applicationDbContext;
-        }
+        public WaypointsController(ApplicationDbContext applicationDbContext) => this.applicationDbContext = applicationDbContext;
         [HttpGet]
         public IActionResult GetAllWaypoints() { 
             return Ok(applicationDbContext.Waypoints.ToList());

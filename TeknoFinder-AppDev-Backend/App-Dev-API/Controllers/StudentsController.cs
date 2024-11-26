@@ -8,14 +8,13 @@ namespace AppDev.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StudentsController : ControllerBase
     {
         private readonly ApplicationDbContext applicationDbContext;
 
-        public StudentsController(ApplicationDbContext applicationDbContext)
-        {
+        public StudentsController(ApplicationDbContext applicationDbContext) =>
             this.applicationDbContext = applicationDbContext;
-        }
         [HttpGet]
         public IActionResult GetAllStudents() {
             var list = applicationDbContext.Students.ToList();

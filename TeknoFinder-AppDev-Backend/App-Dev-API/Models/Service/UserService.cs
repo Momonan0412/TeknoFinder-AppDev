@@ -29,7 +29,7 @@ namespace AppDev.API.Models.Service
                 await applicationDbContext.SaveChangesAsync();
 
                 var newUser = UserMapper.ConvertFromDTO(userAndStudentDTO.AddUserDTO);
-                newUser.StudentIdentification = newStudent.StudentIdentification; ;
+                newUser.StudentIdentification = newStudent.StudentIdentification;
                 applicationDbContext.Users.Add(newUser);
                 await applicationDbContext.SaveChangesAsync();
 

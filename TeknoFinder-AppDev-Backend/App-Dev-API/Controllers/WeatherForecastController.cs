@@ -5,6 +5,7 @@ namespace AuthenticationAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    // Fuck You t(-.-t)  ~
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

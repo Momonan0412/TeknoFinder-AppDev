@@ -21,7 +21,7 @@ namespace AppDev.API.Models.Entities
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
+        [MinLength(1000)]
         public string Password{get; set;}
 
         [NotMapped] // Exclude from database, used for validation only

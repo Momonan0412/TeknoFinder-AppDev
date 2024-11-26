@@ -40,6 +40,8 @@ namespace AppDev.API.Data
                       .HasMaxLength(200);
                 entity.Property(user => user.Password)
                       .IsRequired();
+                entity.HasIndex(user => user.Email)
+                      .IsUnique();
 
                 // Foreign Key Relationship between User and Student
                 entity.HasOne(user => user.Student)
