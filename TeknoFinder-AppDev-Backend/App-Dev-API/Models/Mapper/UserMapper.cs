@@ -1,4 +1,5 @@
-﻿using AppDev.API.Models.DataTransferObject.Student;
+﻿using AppDev.API.Handler;
+using AppDev.API.Models.DataTransferObject.Student;
 using AppDev.API.Models.DataTransferObject.User;
 using AppDev.API.Models.DataTransferObject.UserAndStudent;
 using AppDev.API.Models.Entities;
@@ -32,10 +33,14 @@ namespace AppDev.API.Models.Mapper
         public static User ConvertFromDTO(AddUserDTO dto)
         {
             Debug.WriteLine($"UserDTO in Mapper: {dto.ToString()}");
+            // Hash the password before storing it
+            //Debug.WriteLine($"This is Password: {dto.Password}");
+            string hashedPassword = PasswordHashHandler.Hash(dto.Password);
+            //Debug.WriteLine($"This is the Hashed Password: {hashedPassword}");
             return new User
             {
                 Email = dto.Email,
-                Password = dto.Password,
+                Password = hashedPassword,
                 IsActive = dto.IsActive,
             };
         }
