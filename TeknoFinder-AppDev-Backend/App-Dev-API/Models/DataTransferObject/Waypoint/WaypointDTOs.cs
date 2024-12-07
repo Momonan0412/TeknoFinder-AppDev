@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using AppDev.API.Models;
+using AppDev.API.Models.EnumValidation;
 
 namespace AppDev.API.Models.DataTransferObject.Waypoint
 {
@@ -16,7 +17,9 @@ namespace AppDev.API.Models.DataTransferObject.Waypoint
         public float PointX { get; set; }
         [Required]
         public float PointY { get; set; }
-
+        public int Floor { get; set; }
+        [Required]
+        public String Building { get; set; }
         public override string ToString()
         {
             return $"User: WaypointName = {WaypointName}, WaypointType = {WaypointType}, Waypoint Coordinates = {PointX}, {PointY}";

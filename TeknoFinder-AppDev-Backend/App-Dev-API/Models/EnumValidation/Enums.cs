@@ -32,4 +32,30 @@
         Building,
 
     }
+
+    public enum StudentProgram
+    {
+        ComputerScience,
+        InformationTechnology,
+        Engineering,
+        BusinessAdministration,
+        Architecture,
+        Nursing,
+        MultimediaArts,
+        Criminology,
+    }
+
+    public enum YearLevel
+    {
+        FirstYearFreshman,
+        SecondYearSophomore,
+        ThirdYearJunior,
+        FourthYearSenior,
+    }
+
+    public enum Status
+    {
+        Regular,
+        Irregular
+    }
 }

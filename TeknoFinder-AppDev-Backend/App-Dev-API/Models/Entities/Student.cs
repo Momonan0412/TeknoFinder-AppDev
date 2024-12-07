@@ -3,31 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppDev.API.Models.Entities
 {
-    public enum StudentProgram
-    {
-        ComputerScience,
-        InformationTechnology,
-        Engineering,
-        BusinessAdministration,
-        Architecture,
-        Nursing,
-        MultimediaArts,
-        Criminology,
-    }
-
-    public enum YearLevel
-    {
-        FirstYearFreshman,
-        SecondYearSophomore,
-        ThirdYearJunior,
-        FourthYearSenior,
-    }
-
-    public enum Status
-    {
-        Regular,
-        Irregular
-    }
 
     public class Student
     {
