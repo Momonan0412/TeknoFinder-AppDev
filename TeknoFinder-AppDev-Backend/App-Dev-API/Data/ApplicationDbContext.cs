@@ -59,8 +59,10 @@ namespace AppDev.API.Data
                       .IsRequired()
                       .HasMaxLength (200);
                 entity.Property(waypoint => waypoint.PointX)
+                      .HasDefaultValue(0)
                       .IsRequired();
                 entity.Property(waypoint => waypoint.PointY)
+                      .HasDefaultValue(0)
                       .IsRequired();
                 entity.HasIndex(waypoint => waypoint.WaypointName)
                       .IsUnique();

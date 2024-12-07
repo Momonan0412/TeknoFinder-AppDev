@@ -13,9 +13,9 @@ namespace AppDev.API.Models.DataTransferObject.Waypoint
         [StringLength(200)]
         public string WaypointType { get; set; }
         [Required]
-        public int PointX { get; set; }
+        public float PointX { get; set; }
         [Required]
-        public int PointY { get; set; }
+        public float PointY { get; set; }
 
         public override string ToString()
         {
