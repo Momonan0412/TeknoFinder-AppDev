@@ -1,5 +1,6 @@
 ﻿using AppDev.API.Models.DataTransferObject.Student;
 using AppDev.API.Models.Entities;
+using AppDev.API.Models.EnumValidation;
 
 namespace AppDev.API.Models.Mapper
 {

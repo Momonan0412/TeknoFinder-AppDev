@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using AppDev.API.Models;
+using AppDev.API.Models.EnumValidation;
 
 namespace AppDev.API.Models.Entities
 {
@@ -18,8 +19,9 @@ namespace AppDev.API.Models.Entities
         public float PointX { get; set; } = 0.0f;
         public float PointY { get; set; } = 0.0f;
 
-
-        // int Floor 
-        // Enum List_Building Enum 
+        public int Floor {  get; set; }
+        [Required]
+        [ValidEnum(typeof(Status))]
+        public Building Building { get; set; }
     }
 }
