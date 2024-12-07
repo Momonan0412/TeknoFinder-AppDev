@@ -15,7 +15,11 @@ namespace AppDev.API.Models.Entities
         [StringLength(200)]
         public string WaypointType { get; set; }
         [Required]
-        public int PointX { get; set; }
-        public int PointY { get; set; }
+        public float PointX { get; set; } = 0.0f;
+        public float PointY { get; set; } = 0.0f;
+
+
+        // int Floor 
+        // Enum List_Building Enum 
     }
 }
