@@ -7,7 +7,7 @@ namespace AppDev.API.Models.Entities
 
     public class Confession
     {
-        public Guid ConfessionId { get; set; } = Guid.NewGuid();
+        public Guid ConfessionId { get; set; }
 
         [Required]
         [ForeignKey(nameof(Student))]

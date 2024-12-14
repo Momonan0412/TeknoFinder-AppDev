@@ -1,4 +1,5 @@
 ﻿using AppDev.API.Data;
+using AppDev.API.Interface;
 using AppDev.API.Models.DataTransferObject.User;
 using AppDev.API.Models.DataTransferObject.UserAndStudent;
 using AppDev.API.Models.Mapper;
@@ -14,55 +15,27 @@ namespace AppDev.API.Controllers
     [Authorize]
     public class UsersController : ControllerBase
     {
-        private readonly ApplicationDbContext applicationDbContext;
-        public UsersController(ApplicationDbContext applicationDbContext) =>
-            (this.applicationDbContext) = (applicationDbContext);
+        private readonly IUserService _userService;
+        public UsersController(IUserService userService) =>
+            (this._userService) = (userService);
 
 
         [HttpGet]
-        public IActionResult GetAllUsers() {
-            return Ok(applicationDbContext.Users.ToList()); // 200
+        public async Task<IActionResult> GetAllUsersAsync() {
+            var users = await _userService.GetAllUsersAsync();
+            return Ok(users);
         }
-
-        //[HttpPost]
-        //public IActionResult AddUser(AddUserDTO addUserDTO)
-        //{
-        //    var newUser = UserMapper.ConvertFromDTO(addUserDTO);
-        //    applicationDbContext.Users.Add(newUser);
-        //    applicationDbContext.SaveChanges();
-        //    return CreatedAtAction( // 201
-        //        nameof(GetUserById),
-        //        new { id = newUser.UserIdentification },
-        //        newUser
-        //        );
-        //}
 
         [HttpPut("{id:guid}/update")]
-        public IActionResult UpdateUserById(Guid id, UpdateUserDTO updateUserDTO) {
-            var user = applicationDbContext.Users.Find(id);
-            if(user is null) return NotFound();
-            if (!string.IsNullOrEmpty(updateUserDTO.Email))
-            {
-                user.Email = updateUserDTO.Email;
-            }
-            if (!string.IsNullOrEmpty(updateUserDTO.Password))
-            {
-                user.Password = updateUserDTO.Password;
-            }
-            if (user.IsActive != updateUserDTO.IsActive)
-            {
-                user.IsActive = updateUserDTO.IsActive;
-            }
-            applicationDbContext.SaveChanges();
-            return Ok(user);
+        public IActionResult UpdateUserByIdAsync(Guid id, UpdateUserDTO updateUserDTO) {
+            var updatedUser = _userService.UpdateUserAsync(id, updateUserDTO);
+            return updatedUser is null ? NotFound() : Ok(updatedUser);
         }
         [HttpPut("{id:guid}/toggle-alive")]
-        public IActionResult UpdateUserIsAlive(Guid id) {
-            var user = applicationDbContext.Users.Find(id);
-            if (user is null) return NotFound();
-            user.IsActive = !user.IsActive;
-            applicationDbContext.SaveChanges();
-            return Ok(user);
+        public async Task<IActionResult> UpdateUserIsAliveAsync(Guid id)
+        {
+            var toggledUser = await _userService.ToggleUserIsActiveAsync(id);
+            return toggledUser is null ? NotFound() : Ok(toggledUser);
         }
     }
 }
