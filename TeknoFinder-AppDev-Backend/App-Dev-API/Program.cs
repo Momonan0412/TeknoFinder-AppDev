@@ -81,9 +81,25 @@ builder.Services.AddCors(options =>
 });
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AppDevCorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+
 var app = builder.Build();
 
 app.UseCors("AppDevCorsPolicy");
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/initial-templates
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
