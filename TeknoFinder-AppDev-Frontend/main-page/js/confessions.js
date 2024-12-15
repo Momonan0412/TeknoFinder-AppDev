@@ -2,11 +2,11 @@ function getConfessionTemplate(confession){
     context = {
         firstname: confession.student.firstName,
         lastname: confession.student.lastName,
-        username: "I am BUG",
+        username: confession.student.username,
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
-        datetime: "BUG"
+        datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     console.log("Preparinf confession template...");
     console.log("Context: ", context);
