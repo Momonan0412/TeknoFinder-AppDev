@@ -1,19 +1,22 @@
 $(document).ready(function () {
     var tempUserDetails = {
-    "studentDTO": {
-        "firstName": "",
-        "lastName": "",
-        "program": "",
-        "yearLevel": "",
-        "status": ""
-    },
-    "addUserDTO": {
-        "email": "",
-        "password": "",
-        "confirmPassword": "",
-        "isActive": true
-    }
-    }
+  "studentDTO": {
+    "firstName": "",
+    "lastName": "",
+    "studentNumber": "",
+    "program": "",
+    "yearLevel": "",
+    "status": ""
+  },
+  "addUserDTO": {
+    "email": "",
+    "username": "",
+    "password": "",
+    "confirmPassword": "",
+    "isActive": true
+  }
+}
+
     if(sessionStorage.getItem("userDetails") == null) {
         sessionStorage.setItem("userDetails", JSON.stringify(tempUserDetails));
     }
@@ -25,7 +28,14 @@ $(document).ready(function () {
         userDetails.studentDTO.lastName = $('#lastname').val();
         console.log(userDetails);
         sessionStorage.setItem("userDetails", JSON.stringify(userDetails));
-        window.location.href = "login-email.html";
-
+        window.location.href = "register-student-two.html";
+    });
+    $('.btn-prev').click(function() {
+        userDetails.studentDTO.studentNumber = $('').val();
+        userDetails.addUserDTO.password = $('').val();
+        userDetails.addUserDTO.confirmPassword = $('').val();
+        console.log(userDetails);
+        sessionStorage.setItem("userDetails", JSON.stringify(userDetails));
+        window.location.href = "register-student-two.html";
     });
 });

@@ -19,6 +19,7 @@ function _displayConfessions(data) {
     const button = document.createElement('button');
 
     data.forEach(item => {
+        // Make this a builder
         let isCompleteCheckbox = document.createElement('input');
         isCompleteCheckbox.type = 'checkbox';
         isCompleteCheckbox.disabled = true;
