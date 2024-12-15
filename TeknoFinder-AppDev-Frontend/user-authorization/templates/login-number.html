@@ -28,7 +28,7 @@
 				
 				<p class="subheader">Sign in now to explore the campus, find your way with ease</p>
 				
-				<form method="POST" action="#">
+				<div>
 					<div class="form-group">
 						<label for="studentnumber">Student Number</label>
 						<input type="text" id="studentnumber" name="studentnumber" placeholder="Enter your student number" required>
@@ -46,7 +46,7 @@
 						<a href="#">Forgot Password?</a>
 					</div>
 					
-					<button type="submit" class="btn-login">
+					<button class="btn-login" id="number-login">
 						Log In
 					</button>
 
@@ -56,13 +56,14 @@
 						<i class="fab fa-google"></i>
 						Log In With Google
 					</button>
-				</form>
+				</div>
 				
 				<p class="register-link">Don’t have an account? <a href="../templates/register-selection.html">Register Now</a></p>
 			</div>
 		</div>
 	</section>
-	
+	<script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../js/user-auth.js"></script>
+	<script src="../js/user-login.js"></script>
 </body>
 </html>
