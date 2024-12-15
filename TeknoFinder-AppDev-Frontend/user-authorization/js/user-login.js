@@ -15,7 +15,7 @@ $(document).ready(function () {
                 sessionStorage.setItem("token", response.accessToken);
                 sessionStorage.setItem("studentId", response.studentId);
                 sessionStorage.setItem("userId", response.userId);
-                window.location.href = "../../landing-page/templates/landing-home.html";
+                window.location.href = "../../main-page/templates/main-home.html";
             },
             error: function (error) {
                 console.error("Error: ", error);
