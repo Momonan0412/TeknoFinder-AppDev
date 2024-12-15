@@ -92,3 +92,4 @@ __pycache__/
 *.swo
 *.sqlproj.user
 !*.bat
+.prettierignore
