@@ -63,7 +63,7 @@
 			</div>
             <div class="recent-posts-slider">
                 <button class="slider-btn left-btn"><i class="fas fa-chevron-left"></i></button>
-                <div class="recent-posts">
+                <div class="recent-posts" id="recentPosts">
                     <div class="post-item">
 						<div class="profilepic-container">
 							<img src=".jpg" >
@@ -114,7 +114,7 @@
 			
 			<div class="recent-posts-slider">
                 <button class="slider-btn left-btn"><i class="fas fa-chevron-left"></i></button>
-                <div class="recent-posts">
+                <div class="recent-posts" id="myConfessions">
 					<!--template sa my confessions-->
                     <div class="post-item">
 						<div class="profilepic-container">
@@ -185,16 +185,16 @@
 			<div>
 				<h3>Filter by Location</h3>
 				<select class="building-filter">
-					<option value="all">Select Building</option>
-					<option value="A">NGE Building</option>
-					<option value="B">RTL Building</option>
-					<option value="C">GLE Building</option>
+					<option value="None">Select Building</option>
+					<option value="NGE">NGE Building</option>
+					<option value="RTL">RTL Building</option>
+					<option value="GLE">GLE Building</option>
 				</select>
 				<select class="floor-filter">
-					<option value="all">Select Floor</option>
+					<option value="None">Select Floor</option>
 				</select>
 				<select class="room-filter">
-					<option value="all">Select Room</option>
+					<option value="None">Select Room</option>
 				</select>
 
 				<button class="add-confessions-btn" id="openAddConfessionModal">Add Confessions</button>
@@ -206,8 +206,9 @@
 				<span class="close-btn" id="closeModal">&times;</span>
 				<h2 style="margin: 0; text-align: center; margin-bottom: 30px;">Add Your Confession</h2>
 				<form id="addConfessionForm">
+					<textarea id="confessionTitle" placeholder="Write your title here..." rows="1"  required></textarea>
 					<textarea id="confessionText" placeholder="Write your confession..." rows="4" required></textarea>
-					<button type="submit" class="submit-btn">Submit Confession</button>
+					<button type="submit" class="submit-btn" id="submit-confession">Submit Confession</button>
 				</form>
 			</div>
 		</div>
@@ -324,19 +325,19 @@
 		const roomFilter = document.querySelector('.room-filter');
 
 		const roomOptions = {
-			A: {
+			"NGE": {
 				1: ['101', '102', '103', '104', '105'],
 				2: ['201', '202', '203', '204', '205'],
 				3: ['301', '302', '303', '304', '305'],
 				4: ['401', '402', '403', '404', '405']
 			},
-			B: {
+			"RTL": {
 				1: ['101', '102', '103', '104', '105'],
 				2: ['201', '202', '203', '204', '205'],
 				3: ['301', '302', '303', '304', '305'],
 				4: ['401', '402', '403', '404', '405']
 			},
-			C: {
+			"GLE": {
 				1: ['101', '102', '103', '104', '105'],
 				2: ['201', '202', '203', '204', '205'],
 				3: ['301', '302', '303', '304', '305'],
@@ -346,9 +347,11 @@
 
 		buildingFilter.addEventListener('change', () => {
 			const selectedBuilding = buildingFilter.value;
-
-			floorFilter.innerHTML = '<option value="all">Select Floor</option>';
-			roomFilter.innerHTML = '<option value="all">Select Room</option>';
+			sessionStorage.setItem('selectedBuilding', selectedBuilding);
+			sessionStorage.setItem('selectedFloor', 'None');
+			sessionStorage.setItem('selectedRoom', 'None');
+			floorFilter.innerHTML = '<option value="None">Select Floor</option>';
+			roomFilter.innerHTML = '<option value="None">Select Room</option>';
 
 			if (roomOptions[selectedBuilding]) {
 				const floors = Object.keys(roomOptions[selectedBuilding]);
@@ -364,18 +367,30 @@
 		floorFilter.addEventListener('change', () => {
 			const selectedBuilding = buildingFilter.value;
 			const selectedFloor = floorFilter.value;
-
-			roomFilter.innerHTML = '<option value="all">Select Room</option>';
+			sessionStorage.setItem('selectedBuilding', selectedBuilding);
+			sessionStorage.setItem('selectedFloor', selectedFloor);
+			sessionStorage.setItem('selectedRoom', 'None')
+			roomFilter.innerHTML = '<option value="None">Select Room</option>';
 
 			if (roomOptions[selectedBuilding] && roomOptions[selectedBuilding][selectedFloor]) {
 				const rooms = roomOptions[selectedBuilding][selectedFloor];
 				rooms.forEach(room => {
 					const option = document.createElement('option');
 					option.value = room;
+					sessionStorage.setItem('selectedRoom', room);
 					option.textContent = `Room ${room}`;
 					roomFilter.appendChild(option);
 				});
 			}
+		});
+
+		roomFilter.addEventListener('change', () => {
+			const selectedBuilding = buildingFilter.value;
+			const selectedFloor = floorFilter.value;
+			const selectedRoom = roomFilter.value;
+			sessionStorage.setItem('selectedBuilding', selectedBuilding);
+			sessionStorage.setItem('selectedFloor', selectedFloor);
+			sessionStorage.setItem('selectedRoom', selectedRoom);
 		});
     </script>
 </body>
