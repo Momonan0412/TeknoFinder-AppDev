@@ -2,6 +2,7 @@
 using AppDev.API.Interface;
 using AppDev.API.Models.DataTransferObject.Schedule;
 using AppDev.API.Models.Entities;
+using AppDev.API.Models.EnumValidation;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppDev.API.Models.Service
@@ -16,8 +17,8 @@ namespace AppDev.API.Models.Service
             {
                 SubjectTitle = s.SubjectTitle,
                 Section = s.Section,
-                Classroom = s.Classroom,
-                Day = s.Day,
+                Classroom = s.Classroom.ToString(),
+                Day = s.Day.ToString(),
                 StartsAt = s.StartsAt,
                 EndsAt = s.EndsAt
             }).ToListAsync();
@@ -33,8 +34,8 @@ namespace AppDev.API.Models.Service
                 {
                     SubjectTitle = s.SubjectTitle,
                     Section = s.Section,
-                    Classroom = s.Classroom,
-                    Day = s.Day,
+                    Classroom = s.Classroom.ToString(),
+                    Day = s.Day.ToString(),
                     StartsAt = s.StartsAt,
                     EndsAt = s.EndsAt
                 })
@@ -48,8 +49,9 @@ namespace AppDev.API.Models.Service
             {
                 SubjectTitle = scheduleDTO.SubjectTitle,
                 Section = scheduleDTO.Section,
-                Classroom = scheduleDTO.Classroom,
-                Day = scheduleDTO.Day,
+                // Enum.Parse<ConfessionContextType>(confessionDTO.ContextType),
+                Classroom = Enum.Parse<Classroom>(scheduleDTO.Classroom),
+                Day = Enum.Parse<Day>(scheduleDTO.Day),
                 StartsAt = scheduleDTO.StartsAt,
                 EndsAt = scheduleDTO.EndsAt
             };
@@ -66,8 +68,8 @@ namespace AppDev.API.Models.Service
 
             schedule.SubjectTitle = scheduleDTO.SubjectTitle;
             schedule.Section = scheduleDTO.Section;
-            schedule.Classroom = scheduleDTO.Classroom;
-            schedule.Day = scheduleDTO.Day;
+            schedule.Classroom = Enum.Parse<Classroom>(scheduleDTO.Classroom);
+            schedule.Day = Enum.Parse<Day>(scheduleDTO.Day);
             schedule.StartsAt = scheduleDTO.StartsAt;
             schedule.EndsAt = scheduleDTO.EndsAt;
 
