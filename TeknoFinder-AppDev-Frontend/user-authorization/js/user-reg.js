@@ -19,9 +19,8 @@ $(document).ready(function () {
     if(sessionStorage.getItem("userDetails") == null) {
         sessionStorage.setItem("userDetails", JSON.stringify(tempUserDetails));
     }
-    
+    console.log("User Details: " + sessionStorage.getItem("userDetails"));
     const userDetails = JSON.parse(sessionStorage.getItem("userDetails"));
-    console.log(userDetails);
     console.log(window.location.href);
     // I know this is disgusting, please dont judge me I dont have a lot of time
     $('#reg-one').click(function() {
@@ -36,16 +35,28 @@ $(document).ready(function () {
         window.location.href = "register-student-two.html";
     });
     $('#reg-two').click(function() {
+        console.log("reg two was clciked")
         userDetails.studentDTO.studentNumber = $('#studentnumber').val();
         userDetails.studentDTO.status = $('#studentstatus').val();
         userDetails.addUserDTO.email = $('#studentemail').val();
         userDetails.addUserDTO.password = $('#password').val();
         userDetails.addUserDTO.confirmPassword = $('#confirmpassword').val();
+        console.log("Form Accepted")
         console.log(userDetails);
         sessionStorage.setItem("userDetails", JSON.stringify(userDetails));
         sessionStorage.removeItem("userDetails");
         $.ajax({
-          
+          url: 'http://localhost:5099/api/Account/Register',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(userDetails),
+          success: function(response) {
+            window.location.href= "../../landing-page/templates/landing-home.html"
+            console.log("Response from server: ", response);
+          },
+          error: function(error) {
+            console.error("Error: ", error);
+          }
         })
     });
 });
