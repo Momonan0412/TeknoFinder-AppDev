@@ -482,7 +482,7 @@ select {
 
 .modal-content {
     background-color: white;
-    margin: 10% auto;
+    margin: 7% auto;
     padding: 40px;
     border-radius: 10px;
     width: 80%;
@@ -496,6 +496,11 @@ textarea {
     border-radius: 10px;
     border: 1px solid #ccc;
     height: 30vh; 
+}
+
+.textarea1 {
+    height: 50px;
+    margin-bottom: 40px;
 }
 
 .submit-btn {
@@ -515,7 +520,7 @@ textarea {
 
 .close-btn {
     position: absolute;
-    top: 24%;
+    top: 17%;
     right: 33%;
     font-size: 50px;
     color: #333;
