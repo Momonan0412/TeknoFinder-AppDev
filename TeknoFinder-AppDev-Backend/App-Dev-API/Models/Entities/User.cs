@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Azure.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppDev.API.Models.Entities
@@ -11,13 +12,13 @@ namespace AppDev.API.Models.Entities
         [ForeignKey(nameof(Student))] 
         public Guid StudentIdentification { get; set; }
         public Student Student { get; set; }
+        public String Username { get; set; }
 
         [Required(ErrorMessage = "Email address is required.")]
         [DataType(DataType.EmailAddress)]
         [EmailAddress(ErrorMessage = "Not a valid email address.")]
         [MaxLength(256)] // Length constraint for performance and consistency
         public string Email {get; set; }
-
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

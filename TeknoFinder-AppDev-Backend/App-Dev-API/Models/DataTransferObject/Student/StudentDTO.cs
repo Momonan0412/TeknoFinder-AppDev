@@ -6,6 +6,7 @@
         public string LastName { get; set; }
 
         // Enums are serialized as strings for readability
+        public String StudentNumber { get; set; }
         public string Program { get; set; }
         public string YearLevel { get; set; }
         public string Status { get; set; }

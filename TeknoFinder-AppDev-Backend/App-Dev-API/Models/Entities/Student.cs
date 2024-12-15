@@ -8,7 +8,9 @@ namespace AppDev.API.Models.Entities
         [Key]
         public Guid StudentIdentification { get; set; }
         public ICollection<Confession> Confessions { get; set; }
-
+        [Required]
+        [MaxLength(100)]
+        public String StudentNumber { get; set; }
         [Required]
         [MaxLength(100)]
         public string FirstName { get; set; }

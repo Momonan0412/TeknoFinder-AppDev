@@ -11,6 +11,8 @@ namespace AppDev.API.Models.DataTransferObject.User
         [MaxLength(256)] // Length constraint for performance and consistency
         public string Email { get; set; }
 
+        [MaxLength(256)] // Length constraint for performance and consistency
+        public String Username { get; set; }
         [DataType(DataType.Password)]
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
         public string Password { get; set; }

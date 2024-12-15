@@ -24,7 +24,10 @@ namespace AppDev.API.Models.Service
             if (string.IsNullOrWhiteSpace(loginUserDTO.Email) || string.IsNullOrWhiteSpace(loginUserDTO.Password)) {
                 return null;
             }
-            var userAccount = await applicationDbContext.Users.FirstOrDefaultAsync(x=>x.Email == loginUserDTO.Email);
+            // Fetch user account based on the provided email
+            var userAccount = await applicationDbContext.Users
+                .Include(u => u.Student) // Ensure Student relationship is included
+                .FirstOrDefaultAsync(x => x.Email == loginUserDTO.Email);
             if (userAccount == null || !PasswordHashHandler.Verify(loginUserDTO.Password, userAccount.Password)) { 
                 return null;
             }
@@ -35,8 +38,11 @@ namespace AppDev.API.Models.Service
             var tokenExpiryTimeStamp = DateTime.UtcNow.AddMinutes(tokenValidityMins);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { 
-                    new Claim(JwtRegisteredClaimNames.Email, loginUserDTO.Email)
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(JwtRegisteredClaimNames.Email, userAccount.Email), // User email
+                    new Claim("UserId", userAccount.UserIdentification.ToString()), // User ID
+                    new Claim("StudentId", userAccount.StudentIdentification.ToString()), // Student ID
                 }),
                 Expires = tokenExpiryTimeStamp,
                 Issuer = issuer,
@@ -54,7 +60,9 @@ namespace AppDev.API.Models.Service
             { 
                 AccessToken = accessToken,
                 Email = loginUserDTO.Email,
-                ExpiresIn = (int)tokenExpiryTimeStamp.Subtract(DateTime.UtcNow).TotalSeconds
+                ExpiresIn = (int)tokenExpiryTimeStamp.Subtract(DateTime.UtcNow).TotalSeconds,
+                StudentId = userAccount.StudentIdentification, // Add Student ID
+                UserId = userAccount.UserIdentification // Add User ID
             };
         }
     }

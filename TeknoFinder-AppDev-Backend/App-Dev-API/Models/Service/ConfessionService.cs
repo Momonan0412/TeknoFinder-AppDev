@@ -19,6 +19,7 @@ namespace AppDev.API.Models.Service
 
         public async Task<bool> DeleteConfessionAsync(Guid id)
         {
+            throw new NotImplementedException();
         }
 
         public async Task<List<GetAllConfessionDTO>> GetAllConfessionsAsync()

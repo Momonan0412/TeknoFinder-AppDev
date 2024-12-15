@@ -9,7 +9,9 @@ namespace AppDev.API.Models.DataTransferObject.User
         [EmailAddress(ErrorMessage = "Not a valid email address.")]
         [MaxLength(256)] // Length constraint for performance and consistency
         public new string Email { get; set; }
-
+        [Required]
+        [MaxLength(256)] // Length constraint for performance and consistency
+        public new String Username { get; set; }
         [Required]
         [DataType(DataType.Password)]
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
