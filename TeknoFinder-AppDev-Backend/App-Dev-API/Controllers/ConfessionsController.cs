@@ -19,7 +19,7 @@ namespace AppDev.API.Controllers
     public class ConfessionsController : ControllerBase
     {
         IConfession _confessionService;
-        public ConfessionsController(IConfession confessionService) => confessionService = _confessionService ?? throw new ArgumentNullException(nameof(confessionService));
+        public ConfessionsController(IConfession confessionService) => _confessionService = confessionService ?? throw new ArgumentNullException(nameof(confessionService));
         
         [HttpGet("DebugPurposes")]
 
