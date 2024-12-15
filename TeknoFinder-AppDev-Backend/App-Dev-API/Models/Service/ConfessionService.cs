@@ -3,6 +3,7 @@ using AppDev.API.Interface;
 using AppDev.API.Models.DataTransferObject.Confession;
 using AppDev.API.Models.DataTransferObject.Student;
 using AppDev.API.Models.Entities;
+using AppDev.API.Models.EnumValidation;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppDev.API.Models.Service
@@ -10,25 +11,32 @@ namespace AppDev.API.Models.Service
     public class ConfessionService : IConfession
     {
         ApplicationDbContext _applicationDbContext;
-        public ConfessionService(ApplicationDbContext applicationDbContext) => _applicationDbContext = applicationDbContext;
+        private readonly ICurrentUserService _currentUserService;
+
+        public ConfessionService(ApplicationDbContext applicationDbContext,
+            ICurrentUserService currentUserService
+            ) => (_applicationDbContext, _currentUserService) = (applicationDbContext, currentUserService);
 
         public async Task<Confession> CreateConfessionAsync(AddConfessionDTO confessionDTO)
         {
             // Find the student by ID
-            var student = await _applicationDbContext.Students
-                .Include(s => s.Confessions) // Load existing Confessions if needed
-                .FirstOrDefaultAsync(s => s.StudentIdentification == confessionDTO.StudentId);
+            var studentID = _currentUserService.StudentId;
+            var student = await _applicationDbContext.Students.FindAsync( studentID );
 
             if (student == null)
             {
                 throw new Exception("Student not found");
             }
-
+            // Initialize the Confessions collection if it is null
+            if (student.Confessions == null)
+            {
+                student.Confessions = new List<Confession>();
+            }
             // Create the new confession
             var newConfession = new Confession
             {
                 StudentId = student.StudentIdentification, // Only set StudentId; EF will resolve the relationship
-                ContextType = confessionDTO.ContextType,
+                ContextType = Enum.Parse<ConfessionContextType>(confessionDTO.ContextType),
                 ContextValue = confessionDTO.ContextValue,
                 Title = confessionDTO.Title,
                 Content = confessionDTO.Content,
@@ -61,7 +69,7 @@ namespace AppDev.API.Models.Service
                     StudentId = c.StudentId,
                     Title = c.Title,
                     Content = c.Content,
-                    ContextType = c.ContextType,
+                    ContextType = c.ContextType.ToString(),
                     ContextValue = c.ContextValue,
                     Student = new StudentDTO
                     {
@@ -84,7 +92,7 @@ namespace AppDev.API.Models.Service
                     StudentId = c.StudentId,
                     Title = c.Title,
                     Content = c.Content,
-                    ContextType = c.ContextType,
+                    ContextType = c.ContextType.ToString(),
                     ContextValue = c.ContextValue,
                     Student = new StudentDTO
                     {
