@@ -1,8 +1,10 @@
 ﻿using AppDev.API.Data;
+using AppDev.API.Interface;
 using AppDev.API.Migrations;
 using AppDev.API.Models.DataTransferObject.Schedule;
 using AppDev.API.Models.Entities;
 using AppDev.API.Models.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,11 +12,12 @@ namespace AppDev.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SchedulesController : ControllerBase
     {
-        private readonly ScheduleService _scheduleService;
+        private readonly ISchedule _scheduleService;
 
-        public SchedulesController(ScheduleService scheduleService)
+        public SchedulesController(ISchedule scheduleService)
         {
             _scheduleService = scheduleService;
         }
