@@ -5,6 +5,7 @@ using AppDev.API.Models.DataTransferObject.User;
 using AppDev.API.Models.DataTransferObject.UserAndStudent;
 using AppDev.API.Models.Entities;
 using AppDev.API.Models.Mapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
@@ -91,6 +92,11 @@ namespace AppDev.API.Models.Service
             user.IsActive = !user.IsActive;
             await applicationDbContext.SaveChangesAsync();
             return user;
+        }
+
+        public async Task<User> GetUserByIdAsync(Guid id)
+        {
+            return await applicationDbContext.Users.FindAsync(id);
         }
     }
 }
