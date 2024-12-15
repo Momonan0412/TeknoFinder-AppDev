@@ -6,7 +6,7 @@ namespace AppDev.API.Interface
     public interface IConfession
     {
         Task<List<GetAllConfessionDTO>> GetAllConfessionsAsync();
-        Task<GetAllConfessionDTO> GetConfessionByIdAsync(Guid id);
+        Task<GetAllConfessionDTO?> GetConfessionByIdAsync(Guid id);
         Task<Confession> CreateConfessionAsync(AddConfessionDTO confessionDTO);
         Task<bool> DeleteConfessionAsync(Guid id);
         Task<Confession> UpdateConfessionAsync(Guid id, UpdateConfessionDTO confessionDTO);

@@ -6,49 +6,27 @@ using Microsoft.EntityFrameworkCore;
 using AppDev.API.Models.DataTransferObject.Student;
 using AppDev.API.Models.DataTransferObject.Schedule;
 using AppDev.API.Models.EnumValidation;
+using AppDev.API.Interface;
+using AppDev.API.Models.Service;
+using Microsoft.VisualBasic;
+using Microsoft.AspNetCore.Authorization;
 
-// pagination : https:\//dev.to/bytehide/pagination-in-c-complete-guide-with-easy-code-examples-3ma2
 namespace AppDev.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ConfessionsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        public ConfessionsController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
-        // debug purposes cuz idk how search without id
+        IConfession _confessionService;
+        public ConfessionsController(IConfession confessionService) => confessionService = _confessionService ?? throw new ArgumentNullException(nameof(confessionService));
+        
         [HttpGet("DebugPurposes")]
-        public async Task<IActionResult> GetAllConfessionsWithId()
-        {
-            var confessions = await _context.Confessions
-                .Include(c => c.Student)
-                .ToListAsync();
-            return Ok(confessions);
-        }
 
         [HttpGet]
         public async Task<IActionResult> GetAllConfessions()
         {
-            var confessions = await _context.Confessions.Include(c => c.Student).Select(c =>
-             new GetAllConfessionDTO()
-             {
-                 StudentId = c.StudentId,
-                 Title = c.Title,
-                 Content = c.Content,
-                 ContextType = c.ContextType,
-                 ContextValue = c.ContextValue,
-                 Student = new StudentDTO()
-                 {
-                     FirstName = c.Student.FirstName,
-                     LastName = c.Student.LastName,
-                     Program = c.Student.Program.ToString(),
-                     YearLevel = c.Student.YearLevel.ToString(),
-                     Status = c.Student.Status.ToString(),
-                 }
-            }).ToListAsync();
+            var confessions = await _confessionService.GetAllConfessionsAsync();
             return Ok(confessions);
         }
 
@@ -56,93 +34,43 @@ namespace AppDev.API.Controllers
         public async Task<IActionResult> GetConfession(Guid id)
         {
 
-            var confession = await _context.Confessions.Include(c => c.Student).Where(c=>c.ConfessionId == id).Select(c =>
-            new GetAllConfessionDTO()
-            {
-                StudentId = c.StudentId,
-                ContextType = c.ContextType,
-                ContextValue = c.ContextValue,
-                Content = c.Content,
-                Title = c.Title,
-                Student = new StudentDTO()
-                {
-                    FirstName = c.Student.FirstName,
-                    LastName = c.Student.LastName,
-                    Program = c.Student.Program.ToString(),
-                    YearLevel = c.Student.YearLevel.ToString(),
-                    Status = c.Student.Status.ToString(),
-                }
-            
-            }).SingleOrDefaultAsync();
-            if (confession == null)
-            {
-                return NotFound();
-            }
+            var confession = await _confessionService.GetConfessionByIdAsync(id);
+            if (confession == null) return NotFound();
             return Ok(confession);
         }
         [HttpPost]
-        public async Task<IActionResult> CreateConfession(AddConfessionDTO conf)
+        public async Task<IActionResult> CreateConfession(AddConfessionDTO confessionDTO)
         {
-
-            // UNCOMMENT MEH IF FIXED NA
-            var student = await _context.Students.FindAsync(conf.StudentId);
-            if (student == null)
+            try
             {
-                return NotFound("Student not found");
+                var confession = await _confessionService.CreateConfessionAsync(confessionDTO);
+                return CreatedAtAction(nameof(GetConfession), new { id = confession.ConfessionId }, confession);
             }
-            Confession newConfession = new Confession()
+            catch (Exception ex)
             {
-                StudentId = conf.StudentId,
-                Student = student,
-                ContextType = conf.ContextType,
-                ContextValue = conf.ContextValue.ToString(),
-                Title = conf.Title,
-                Content = conf.Content,
-                CreatedOn = DateTime.UtcNow
-            };
-            await _context.AddAsync(newConfession);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetConfession),new {id = newConfession.ConfessionId},newConfession);
+                return BadRequest(new { Message = ex.Message });
+            }
         }
+
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteConfession(Guid id)
         {
-            var confession = await _context.Confessions.FindAsync(id);
-            if (confession == null)
-            {
-                return NotFound("Confession Not Found");
-            }
-            _context.Confessions.Remove(confession);
-            await _context.SaveChangesAsync();
+            var confession = await _confessionService.DeleteConfessionAsync(id);
+            if (confession) return NotFound();
             return Ok("Successfully deleted confession");
         }
-        //  di muupdate ang student but tell me lang if nahan muupdate pud ang student
         [HttpPut("update/{id:guid}")]
         public async Task<IActionResult> UpdateConfession(Guid id, UpdateConfessionDTO confDTO)
         {
-            //var conf = await _context.Confessions.Select(c => new UpdateConfessionDTO()
-            //{
-
-            //    ContextType = c.ContextType,
-            //    ContextValue = c.ContextValue,
-            //    Content = c.Content,
-            //    Title = c.Title,
-
-            //}).SingleOrDefaultAsync();
-            var conf = await _context.Confessions.FindAsync(id);
-            if (conf == null)
+            try
             {
-                return NotFound("Confession not found");
+                var updatedConfession = await _confessionService.UpdateConfessionAsync(id, confDTO);
+                return Ok(updatedConfession);
             }
-            conf.ContextType = confDTO.ContextType;
-            conf.ContextValue = confDTO.ContextValue;
-            conf.Title = confDTO.Title;
-            conf.Content = confDTO.Content;
-
-            await _context.SaveChangesAsync();
-            return Ok(conf);
-            //return CreatedAtAction(nameof(GetConfession), new { id = conf. }, conf);
-
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }
