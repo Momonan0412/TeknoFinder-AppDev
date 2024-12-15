@@ -33,7 +33,7 @@
 					<span>Step 01 of 02</span>
 				</div>
 
-				<form method="POST" action="#">
+				<form action= "register-student-two.html">
 					<div class="fullname">
 						<div class="form-group">
 							<label for="firstname">First Name</label>
@@ -56,10 +56,10 @@
 							<label for="yearlevel">Year Level</label>
 							<select id="yearlevel" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url('data:image/svg+xml;utf8,<svg fill=\'%23000\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'><path d=\'M5 7l5 5 5-5z\'/></svg>') no-repeat right 15px center; background-size: 30px; color: #757575;" onchange="this.style.color='black'">
 								<option value="">Select year level...</option>
-								<option value="1st Year">1st Year</option>
-								<option value="2nd Year">2nd Year</option>
-								<option value="3rd Year">3rd Year</option>
-								<option value="4th Year">4th Year</option>
+								<option value="FirstYearFreshman">1st Year</option>
+								<option value="SecondYearFreshman">2nd Year</option>
+								<option value="ThirdYearJunior">3rd Year</option>
+								<option value="FourthYearSenior">4th Year</option>
 							</select>
 						</div>
 					</div>
@@ -68,8 +68,8 @@
 						<label for="program">Program</label>
 						<select id="program" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url('data:image/svg+xml;utf8,<svg fill=\'%23000\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'><path d=\'M5 7l5 5 5-5z\'/></svg>') no-repeat right 15px center; background-size: 30px; color: #757575;" onchange="this.style.color='black'">
 							<option value="">Select program...</option>
-							<option value="BS Computer Science">BS Computer Science</option>
-							<option value="BS Information Technology">BS Information Technology</option>
+							<option value="ComputerScience">BS Computer Science</option>
+							<option value="InformationTechnology">BS Information Technology</option>
 							<option value="BS Civil Engineering">BS Civil Engineering</option>
 							<option value="BS Architecture">BS Architecture</option>
 							<option value="BS Nursing">BS Nursing</option>
@@ -77,7 +77,7 @@
 						</select>
 					</div>
 				
-					<button type="submit" class="btn-next">
+					<button class="btn-next" id="reg-one">
 						Next <i class="fa fa-arrow-right"></i>
 					</button>
 

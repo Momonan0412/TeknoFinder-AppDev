@@ -33,12 +33,22 @@
 					<span>Step 02 of 02</span>
 				</div>
 
-				<form method="POST" action="#">
+				<div>
 					<div class="form-group">
 						<label for="studentnumber">Student Number</label>
 						<input type="text" id="studentnumber" name="studentnumber" placeholder="Enter your student number" required>
 					</div>
-
+					<div class="form-group">
+						<label for="studentemail">Email </label>
+						<input type="text" id="studentemail" placeholder="Enter your email" required>
+					</div>
+					<div class="form-group">
+						<label for="studentstatus">Enter Student Status</label>
+						<select id="studentstatus" required style="-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url('data:image/svg+xml;utf8,<svg fill=\'%23000\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'><path d=\'M5 7l5 5 5-5z\'/></svg>') no-repeat right 15px center; background-size: 30px; color: #757575;" onchange="this.style.color='black'">
+							<option value="Regular">Regular</option>
+							<option value="Irregular">Irregular</option>
+						</select>
+					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" id="password" name="password" placeholder="Enter your password" required>
@@ -49,16 +59,17 @@
 						<input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
 					</div>
 					
-					<button type="submit" class="btn-register">
+					<button class="btn-register" id="reg-two">
 						Register
 					</button>
-				</form>
+				</div>
 				
 				<p class="login-link">Already have an account? <a href="../templates/login-selection.html">Login Now</a></p>
 			</div>
 		</div>
 	</section>
-	
+    <script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../js/user-auth.js"></script>
+	<script src="../js/user-reg.js"></script>
 </body>
 </html>
