@@ -224,7 +224,7 @@ function getConfessionTemplate(confession){
     let postTemplate = `
     <div class="post-item">
         <div class="profilepic-container">
-            <img src=".jpg" >
+            <img src="profile-avatar.png" style="min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; ">
         </div>
         <div class="post-details">
             <div class="detail-head">
