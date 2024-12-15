@@ -41,6 +41,15 @@ $(document).ready(function () {
         userDetails.addUserDTO.email = $('#studentemail').val();
         userDetails.addUserDTO.password = $('#password').val();
         userDetails.addUserDTO.confirmPassword = $('#confirmpassword').val();
+        // check if password is 6 len long and email is valid
+        if(userDetails.addUserDTO.password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return;
+        }
+        if(!userDetails.addUserDTO.email.includes('@') || !userDetails.addUserDTO.email.includes('.')) {
+            alert("Invalid email address");
+            return;
+        }
         console.log("Form Accepted")
         console.log(userDetails);
         sessionStorage.setItem("userDetails", JSON.stringify(userDetails));

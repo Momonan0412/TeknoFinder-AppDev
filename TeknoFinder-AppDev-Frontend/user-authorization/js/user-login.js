@@ -1,12 +1,19 @@
 $(document).ready(function () {
     $(".btn-login").click(function () {
-        var loginData = {
-            "email": $("#email").val(),
-            "password": $("#password").val()
+        var url = 'http://localhost:5099/api/Account/LoginStudentNumber';
+        var loginData = {}
+        // check if id is email-login or number-login
+        if($('.btn-login').attr('id') == 'email-login'){
+            loginData.email = $("#email").val();
+            url = 'http://localhost:5099/api/Account/LoginEmail';
         }
+        else{
+            loginData.studentNumber = $("#studentnumber").val();
+        }
+        loginData.password = $("#password").val();
         console.log(loginData);
         $.ajax({
-            url: 'http://localhost:5099/api/Account/Login',
+            url: url,
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(loginData),
