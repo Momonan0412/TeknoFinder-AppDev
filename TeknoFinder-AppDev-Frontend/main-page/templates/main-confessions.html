@@ -37,13 +37,13 @@
 						<img src="../img/user-profile.jpg" alt="Profile">
 					</div>
 					<div class="profile-info">
-						<h3>fname + lname</h3>
-						<span>stud_num/email</span>
+						<h3 id="student-username-label">fname + lname</h3>
+						<span id="student-number-label">stud_num/email</span>
 					</div>
 				</label>
 
 				<div class="profile-menu">
-					<a href=""><i class="fa fa-user"></i> View Profile</a>
+					<a href="../../profile-page/templates/profile-personal.html"><i class="fa fa-user"></i> View Profile</a>
 					<a href=""><i class="fa fa-cog"></i> Settings</a>
 					<a href="" class="log-out"><i class="fa fa-sign-out-alt"></i> Logout</a>
 				</div>
@@ -269,6 +269,7 @@
 		<div class="footer-right-container"></div>
 	</footer>
 	
+	<script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../js/main-page.js" defer></script>
 	<script>
         const sliders = document.querySelectorAll('.recent-posts-slider');
