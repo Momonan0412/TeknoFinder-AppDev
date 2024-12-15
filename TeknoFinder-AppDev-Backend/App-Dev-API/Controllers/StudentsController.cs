@@ -5,6 +5,7 @@ using AppDev.API.Models.Mapper;
 using Microsoft.AspNetCore.Authorization;
 using AppDev.API.Models.DataTransferObject.Student;
 using AppDev.API.Interface;
+using AppDev.API.Models.Service;
 namespace AppDev.API.Controllers
 {
     [Route("api/[controller]")]
@@ -13,7 +14,13 @@ namespace AppDev.API.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IStudentService _studentService;
-        public StudentsController(IStudentService studentService) => _studentService = studentService;
+        private readonly IUserService _IUserService;
+        private readonly ICurrentUserService _currentUserService;
+        public StudentsController(IStudentService studentService, 
+            ICurrentUserService currentUserService,
+            IUserService userService
+            ) => 
+            (_studentService, _currentUserService, _IUserService) = (studentService, currentUserService, userService);
         [HttpGet]
         public async Task<IActionResult> GetAllStudentsAsync()
         {
@@ -24,7 +31,16 @@ namespace AppDev.API.Controllers
         public async Task<IActionResult> GetStudentByIdAsync(Guid id)
         {
             var student = await _studentService.GetStudentByIdAsync(id);
-            return student is null ? NotFound() : Ok(student);
+            var userId = _currentUserService.UserId;
+            var user = await _IUserService.GetUserByIdAsync(userId);
+            return student is null ? NotFound() : Ok(new StudentUsernameDTO { 
+                Username = user.Username,
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                StudentNumber = student.StudentNumber,
+                Program = student.Program,
+                YearLevel = student.YearLevel,
+            });
         }
 
         [HttpPut("{id:guid}/update")]

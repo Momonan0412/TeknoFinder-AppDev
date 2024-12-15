@@ -1,4 +1,5 @@
 ﻿using AppDev.API.Data;
+using AppDev.API.Interface;
 using AppDev.API.Models.DataTransferObject.User;
 using AppDev.API.Models.DataTransferObject.UserAndStudent;
 using AppDev.API.Models.Service;
@@ -14,8 +15,11 @@ namespace AppDev.API.Controllers
     {
         private readonly JwtService jwtService;
         private readonly ApplicationDbContext applicationDbContext;
-        private readonly UserService userService;
-        public AccountController(JwtService jwtService, ApplicationDbContext applicationDbContext) => (this.jwtService, this.applicationDbContext, userService) = (jwtService, applicationDbContext, new UserService(applicationDbContext));
+        private readonly IUserService _userService;
+        public AccountController(JwtService jwtService, ApplicationDbContext applicationDbContext, IUserService userService) 
+            => 
+            (this.jwtService, this.applicationDbContext, _userService) = 
+            (jwtService, applicationDbContext, userService);
 
 
         [AllowAnonymous]
@@ -34,7 +38,7 @@ namespace AppDev.API.Controllers
         {
             try
             {
-                var result = await userService.AddUserAndStudentAsync(userAndStudentDTO);
+                var result = await _userService.AddUserAndStudentAsync(userAndStudentDTO);
                 if (!result.Success) return BadRequest(result.ErrorMessage);
 
                 return CreatedAtAction(
@@ -51,10 +55,14 @@ namespace AppDev.API.Controllers
             }
         }
         [HttpGet("{id:guid}")]
-        public IActionResult GetUserById(Guid id)
+        public async Task<IActionResult> GetUserById(Guid id)
         {
-            var user = applicationDbContext.Users.Find(id);
-            return (user is null) ? Ok() : NotFound();
+            var user = await _userService.GetUserByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound(); // Return 404 if user is not found
+            }
+            return Ok(user); // Return 200 OK with the user data
         }
     }
 }

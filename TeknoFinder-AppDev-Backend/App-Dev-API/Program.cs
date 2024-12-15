@@ -19,6 +19,9 @@ builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISchedule, ScheduleService>();
 builder.Services.AddScoped<IConfession, ConfessionService>();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAuthentication(optiions =>
 {
