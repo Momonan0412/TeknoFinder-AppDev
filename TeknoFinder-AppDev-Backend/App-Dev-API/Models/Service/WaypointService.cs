@@ -32,16 +32,6 @@ namespace AppDev.API.Models.Service
                 // Convert DTO to entity
                 var newWaypoint = WaypointMapper.ConvertFromDTO(waypointDTO);
 
-                // Check for duplicate WaypointName
-                var existingWaypoint = await _applicationDbContext.Waypoints
-                    .FirstOrDefaultAsync(w => w.WaypointName == newWaypoint.WaypointName);
-
-                if (existingWaypoint != null)
-                {
-                    // Throw a custom exception or return a specific error
-                    throw new InvalidOperationException($"A waypoint with the name '{newWaypoint.WaypointName}' already exists.");
-                }
-
                 // Add new waypoint to the context
                 _applicationDbContext.Waypoints.Add(newWaypoint);
 
@@ -57,12 +47,6 @@ namespace AppDev.API.Models.Service
                 // Log the error or rethrow a custom exception with more details
                 Debug.WriteLine($"Database error: {dbEx.Message}");
                 throw new ApplicationException("An error occurred while saving the waypoint.", dbEx);
-            }
-            catch (InvalidOperationException invalidEx)
-            {
-                // Handle known validation errors (e.g., duplicate waypoint)
-                Debug.WriteLine($"Validation error: {invalidEx.Message}");
-                throw new ApplicationException(invalidEx.Message);
             }
             catch (Exception ex)
             {

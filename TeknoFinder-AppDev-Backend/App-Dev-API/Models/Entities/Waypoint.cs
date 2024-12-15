@@ -17,6 +17,7 @@ namespace AppDev.API.Models.Entities
         public string WaypointType { get; set; }
         [Required]
         public float PointX { get; set; } = 0.0f;
+        [Required]
         public float PointY { get; set; } = 0.0f;
 
         public int Floor {  get; set; }

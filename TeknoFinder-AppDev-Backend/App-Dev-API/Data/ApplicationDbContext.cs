@@ -53,7 +53,6 @@ namespace AppDev.API.Data
             modelBuilder.Entity<Waypoint>(entity => {
                 entity.HasKey(waypoint => waypoint.WaypointId);
                 entity.Property(waypoint => waypoint.WaypointName)
-                      .IsRequired()
                       .HasMaxLength(200);
                 entity.Property(waypoint => waypoint.WaypointType)
                       .IsRequired()
