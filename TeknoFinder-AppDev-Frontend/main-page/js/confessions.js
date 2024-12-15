@@ -20,6 +20,45 @@ const modal = document.getElementById("addConfessionModal");
 const openModalBtn = document.getElementById("openAddConfessionModal");
 const closeModalBtn = document.getElementById("closeModal");
 
+$('.filter-btn').click(function () {
+    let search = $('.search-bar').val();
+    //clean the recent and my posts
+    $('#recentPosts').html('');
+    $('#myConfessions').html('');
+    //fetch all confessions and filter through
+    var token = sessionStorage.getItem("token");
+    var studentId = sessionStorage.getItem("studentId");
+    console.log("Token: ", token);
+    console.log("Student ID: ", studentId);
+    $.ajax({
+        url: `http://localhost:5099/api/Confessions`,
+        type: 'GET',
+        headers: {
+            Authorization: `Bearer ${token}`, // Add JWT token in Authorization header
+        },
+        contentType: 'application/json',
+        success: function (response) {
+            console.log("Response from server (response): ", response);
+            //filter where content includes search
+            response.filter(confession => confession.content.includes(search));
+            confessions_global = response;
+            response.sort((a, b) => new Date(b.createdOn) - new Date(a.createdOn)); // sort by date
+            response.forEach(confession => {
+                if (confession.content.includes(search)) {
+                    $('#recentPosts').append(getConfessionTemplate(confession));
+                }
+                // get my confessions
+                if (confession.studentId == studentId && confession.content.includes(search)){
+                    $('#myConfessions').append(getConfessionTemplate3(confession));
+                }
+            });
+        },
+        error: function (error) {
+            console.error("Error: ", error);
+        }
+    })
+});
+
 openModalBtn.onclick = function () {
     modal.style.display = "block";
 }
