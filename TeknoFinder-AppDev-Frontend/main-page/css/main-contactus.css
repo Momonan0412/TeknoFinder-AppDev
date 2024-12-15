@@ -7,7 +7,6 @@ body {
 	font-family: 'Anybody', sans-serif;
 	margin: 0;
 	padding: 0;
-	//background-color: grey;
 	color: black;
 	user-select: none;
 }
@@ -49,13 +48,11 @@ header {
 .navbar nav ul li {
     padding: 30px 0px;
     font-size: 21px;
-	//border: 1px solid blue;
 }
 
 .navbar nav ul a {
     padding: 30px 20px;
     font-size: 21px;
-	//border: 1px solid yellow;
 }
 
 .navbar nav ul li .current-page {
@@ -122,6 +119,7 @@ header {
 .profile .profile-info {
     line-height: 1.4;
     text-align: left;
+	color: black;
 }
 
 .profile .profile-info h3,
@@ -199,11 +197,10 @@ header {
 /* Contact Us Section */
 
 .get-started-section {
-	background-color: #faf9f6;
+	background-color: #f5f5f5;
     padding: 25px;
 	padding-top: 40px;
     display: flex;
-    //justify-content: center;
     align-items: center;
     text-align: center;
 	flex-direction: column;
@@ -215,13 +212,9 @@ header {
 	padding: 80px 0px;
 }
 
-.contact-header span {
-	// border: 1px solid blue; 
-}
-
 .contact-head {
 	font-size: 90px;
-	background: linear-gradient(90deg, #002F19, #00954F);
+	background: linear-gradient(90deg, #601426, #f6c302);
 	-webkit-background-clip: text;
 	color: transparent;
 	font-weight: bold;
@@ -231,7 +224,7 @@ header {
 	font-size: 25px;
 	padding: 20px 40px;
 	border-radius: 30px;
-	background: linear-gradient(180deg, #002F19, #00954F);
+	background: linear-gradient(180deg, #601426, #f6c302);
 	color: white;
 	font-weight: bold;
 	margin-bottom: 40px;
@@ -240,8 +233,6 @@ header {
 }
 
 .contact-info-box {
-	//background-color: #071d0e;
-	//border-radius: 50px;
 	padding: 40px 0px;
 	margin-bottom: 30px;
 	display: flex;
@@ -251,14 +242,14 @@ header {
 }
 
 .contact-info {
-	background-color: #071d0e;
+	background-color: #601325;
 	border-radius: 50px;
 	display: flex;
 	justify-content: center;
     text-align: center;
 	flex-direction: column;
 	padding: 50px 50px;
-	color: #00FF7F;
+	color: #f6c303;
 	font-size: 22px;
 	width: 280px;
 }
@@ -275,7 +266,7 @@ header {
 .contact-info:hover .fas.fa-phone,
 .contact-info:hover .fas.fa-envelope,
 .contact-info:hover .fas.fa-map {
-    color: #002f19;
+    color: #601325;
 	-webkit-text-stroke: 1px black;
 }
 
@@ -284,7 +275,7 @@ header {
 }
 
 .contact-info:hover span{
-    color: #002f19;
+    color: #f6c303;
 }
 
 .contact-info p{
@@ -301,12 +292,12 @@ header {
 .fas.fa-envelope,
 .fas.fa-map {
     color: transparent;
-    -webkit-text-stroke: 3px #00ff7f;
+    -webkit-text-stroke: 3px #f6c303;
 	font-size: 80px;
 }
 
 .contact-form-section {
-    background: linear-gradient(to bottom, #002F19 50%, #000905 100%);
+    background: #601325;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,7 +314,7 @@ form {
 	width: 100%;
 }
 
-label {
+.contact-form-section form label {
     margin: 10px 0 10px;
     font-size: 25px;
     color: white;
@@ -380,8 +371,8 @@ textarea:focus {
 }
 
 button[type="submit"] {
-    background-color: #00ff7f; 
-    color: #071d0e;
+    background-color: #f6c305; 
+    color: black;
     font-weight: bold;
     cursor: pointer;
 	width: fit-content;
@@ -396,7 +387,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: white; 
-    color: #071d0e; 
+    color: #f6c303; 
 }
 
 /* Footer Section */
