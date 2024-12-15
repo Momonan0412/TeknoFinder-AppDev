@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TeknoFinder - About Us</title>
 	<link rel="stylesheet" href="../css/profile-personal.css">
+	<link rel="stylesheet" href="../css/schedule.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Anybody&display=swap" rel="stylesheet">
@@ -63,7 +64,7 @@
 		<ul>
 			<li><a href="">Personal Information</a></li>
 			<li><a href="">Saved Classroom</a></li>
-			<li><a href="">My Schedule</a></li>
+			<li><a onclick="openSchedule();">My Schedule</a></li>
 			<li><a href="">Profile Settings</a></li>
 		</ul>
 	</nav>
@@ -73,6 +74,16 @@
 		<div class="divider-container">
 			<h1 class="content-divider">Student's Personal Information</h1>
 		</div>
+		<div>
+			<div class="divider-container">
+				<h1 class="content-divider">Student's Personal Information</h1>
+			</div>
+			<div class="schedule-container" id="schedule-modal">
+				<!-- Schedule table will be dynamically inserted here -->
+			</div>
+		</div>
+		
+
 		
 		<div class="profile-content-box">
 
@@ -88,5 +99,8 @@
 	
 	{% comment %} <script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../../main-page/js/main-page.js" defer></script> {% endcomment %}
+	<!--elijah changees-->
+	<script src="../js/schedules.js"></script> 
+
 </body>
 </html>
