@@ -23,8 +23,19 @@ namespace AppDev.API.Controllers
 
 
         [AllowAnonymous]
-        [HttpPost("Login")]
-        public async Task<ActionResult<LoginResponseDTO>> Login(LoginUserDTO loginUserDTO)
+        [HttpPost("LoginEmail")]
+        public async Task<ActionResult<LoginEmailResponseDTO>> Login(LoginEmailDTO loginUserDTO)
+        {
+            var result = await jwtService.Authenticate(loginUserDTO);
+            if (result == null)
+            {
+                return Unauthorized();
+            }
+            return result;
+        }
+        [AllowAnonymous]
+        [HttpPost("LoginStudentNumber")]
+        public async Task<ActionResult<LoginNumberResponseDTO>> Login(LoginNumberDTO loginUserDTO)
         {
             var result = await jwtService.Authenticate(loginUserDTO);
             if (result == null)

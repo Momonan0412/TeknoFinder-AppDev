@@ -1,16 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppDev.API.Models.DataTransferObject.User
 {
-    public class LoginUserDTO
+    public class LoginNumberDTO
     {
-
-        [Required(ErrorMessage = "Email address is required.")]
-        [DataType(DataType.EmailAddress)]
-        [EmailAddress(ErrorMessage = "Not a valid email address.")]
+        [Required(ErrorMessage = "Student number address is required.")]
+        //[SwaggerSchema("The student's unique identifier", Example = "12345678")]
         [MaxLength(256)] // Length constraint for performance and consistency
-        public new string Email { get; set; }
+        public new string StudentNumber { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

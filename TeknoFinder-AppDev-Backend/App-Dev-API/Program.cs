@@ -54,6 +54,7 @@ builder.Services.AddControllers()
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
     });
 builder.Services.AddSwaggerGen(options => {
+    options.EnableAnnotations();
     var jwtSecurityScheme = new OpenApiSecurityScheme
     {
         BearerFormat = "JWT",
@@ -69,7 +70,6 @@ builder.Services.AddSwaggerGen(options => {
         }
     };
     options.AddSecurityDefinition("Bearer", jwtSecurityScheme);
-
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
