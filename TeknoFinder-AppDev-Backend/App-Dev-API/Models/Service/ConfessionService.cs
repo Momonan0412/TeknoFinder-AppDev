@@ -62,6 +62,8 @@ namespace AppDev.API.Models.Service
 
         public async Task<List<GetAllConfessionDTO>> GetAllConfessionsAsync()
         {
+            var user = await _applicationDbContext.Users.FindAsync(_currentUserService.UserId);
+            if (user is null) return null;
             return await _applicationDbContext.Confessions
                 .Include(c => c.Student)
                 .Select(c => new GetAllConfessionDTO
@@ -71,13 +73,15 @@ namespace AppDev.API.Models.Service
                     Content = c.Content,
                     ContextType = c.ContextType.ToString(),
                     ContextValue = c.ContextValue,
-                    Student = new StudentDTO
+                    CreatedOn = c.CreatedOn,
+                    Student = new ConfessionStudentDTO
                     {
                         FirstName = c.Student.FirstName,
                         LastName = c.Student.LastName,
                         Program = c.Student.Program.ToString(),
                         YearLevel = c.Student.YearLevel.ToString(),
                         Status = c.Student.Status.ToString(),
+                        Username = user.Username
                     }
                 }).ToListAsync();
         }
