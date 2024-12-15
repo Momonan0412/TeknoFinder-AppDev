@@ -1,3 +1,174 @@
+const sliders = document.querySelectorAll('.recent-posts-slider');
+sliders.forEach(slider => {
+    const leftBtn = slider.querySelector('.left-btn');
+    const rightBtn = slider.querySelector('.right-btn');
+    const posts = slider.querySelector('.recent-posts');
+
+    let scrollAmount = 0;
+    const scrollStep = 300;
+
+    rightBtn.addEventListener('click', () => {
+        posts.scrollLeft += scrollStep;
+    });
+
+    leftBtn.addEventListener('click', () => {
+        posts.scrollLeft -= scrollStep;
+    });
+});
+
+const modal = document.getElementById("addConfessionModal");
+const openModalBtn = document.getElementById("openAddConfessionModal");
+const closeModalBtn = document.getElementById("closeModal");
+
+openModalBtn.onclick = function () {
+    modal.style.display = "block";
+}
+
+closeModalBtn.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+document.getElementById('addConfessionForm').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+    const confessionText = document.getElementById("confessionText").value;
+    if (confessionText) {
+        alert('Confession added: ' + confessionText);
+        modal.style.display = "none";
+    }
+});
+
+const buildingFilter = document.querySelector('.building-filter');
+const floorFilter = document.querySelector('.floor-filter');
+const roomFilter = document.querySelector('.room-filter');
+
+const roomOptions = {
+    "NGE": {
+        1: ['101', '102', '103', '104', '105'],
+        2: ['201', '202', '203', '204', '205'],
+        3: ['301', '302', '303', '304', '305'],
+        4: ['401', '402', '403', '404', '405']
+    },
+    "RTL": {
+        1: ['101', '102', '103', '104', '105'],
+        2: ['201', '202', '203', '204', '205'],
+        3: ['301', '302', '303', '304', '305'],
+        4: ['401', '402', '403', '404', '405']
+    },
+    "GLE": {
+        1: ['101', '102', '103', '104', '105'],
+        2: ['201', '202', '203', '204', '205'],
+        3: ['301', '302', '303', '304', '305'],
+        4: ['401', '402', '403', '404', '405']
+    }
+};
+
+buildingFilter.addEventListener('change', () => {
+    console.log('global confessions', confessions_global);
+    const selectedBuilding = buildingFilter.value;
+    sessionStorage.setItem('selectedBuilding', selectedBuilding);
+    sessionStorage.setItem('selectedFloor', 'None');
+    sessionStorage.setItem('selectedRoom', 'None');
+    floorFilter.innerHTML = '<option value="None">Select Floor</option>';
+    roomFilter.innerHTML = '<option value="None">Select Room</option>';
+    $('#filteredConfessions').html(''); // clear filtered confessions
+    if (roomOptions[selectedBuilding]) {
+        const floors = Object.keys(roomOptions[selectedBuilding]);
+        floors.forEach(floor => {
+            const option = document.createElement('option');
+            option.value = floor;
+            option.textContent = `Floor ${floor}`;
+            floorFilter.appendChild(option);
+        });
+        const filteredConfessions = confessions_global.filter(confession => {
+            const identifier = getConfessionIdentifier();
+            console.log(identifier);
+            return confession.contextType === identifier.type && confession.contextValue === identifier.location; 
+        });
+        console.log("Filtered Confessions: ", filteredConfessions);
+        filteredConfessions.forEach(confession => {
+            $('#filteredConfessions').append(getConfessionTemplate2(confession));
+        });
+    }
+});
+
+floorFilter.addEventListener('change', () => {
+    $('#filteredConfessions').html(''); // clear filtered confessions
+    const selectedBuilding = buildingFilter.value;
+    const selectedFloor = floorFilter.value;
+    sessionStorage.setItem('selectedBuilding', selectedBuilding);
+    sessionStorage.setItem('selectedFloor', selectedFloor);
+    sessionStorage.setItem('selectedRoom', 'None')
+    roomFilter.innerHTML = '<option value="None">Select Room</option>';
+
+    if (roomOptions[selectedBuilding] && roomOptions[selectedBuilding][selectedFloor]) {
+        const rooms = roomOptions[selectedBuilding][selectedFloor];
+        rooms.forEach(room => {
+            const option = document.createElement('option');
+            option.value = room;
+            sessionStorage.setItem('selectedRoom', room);
+            option.textContent = `Room ${room}`;
+            roomFilter.appendChild(option);
+        });
+        const filteredConfessions = confessions_global.filter(confession => {
+            const identifier = getConfessionIdentifier();
+            console.log(identifier);
+            return confession.contextType === identifier.type && confession.contextValue === identifier.location; 
+        });
+        console.log("Filtered Confessions: ", filteredConfessions);
+        filteredConfessions.forEach(confession => {
+            $('#filteredConfessions').append(getConfessionTemplate2(confession));
+        });
+    }
+});
+
+roomFilter.addEventListener('change', () => {
+    $('#filteredConfessions').html(''); // clear filtered confessions
+    const selectedBuilding = buildingFilter.value;
+    const selectedFloor = floorFilter.value;
+    const selectedRoom = roomFilter.value;
+    sessionStorage.setItem('selectedBuilding', selectedBuilding);
+    sessionStorage.setItem('selectedFloor', selectedFloor);
+    sessionStorage.setItem('selectedRoom', selectedRoom);
+    const filteredConfessions = confessions_global.filter(confession => {
+        const identifier = getConfessionIdentifier();
+        console.log(identifier);
+        return confession.contextType === identifier.type && confession.contextValue === identifier.location; 
+    });
+    console.log("Filtered Confessions: ", filteredConfessions);
+    filteredConfessions.forEach(confession => {
+        $('#filteredConfessions').append(getConfessionTemplate2(confession));
+    });
+});
+
+function getConfessionIdentifier(){
+    var location = "NGE101" // CHANGE
+    var type = "Classroom" // CHANGE
+    // get selected building room and floor
+    let building = sessionStorage.getItem("selectedBuilding");
+    let floor = sessionStorage.getItem("selectedFloor");
+    let room = sessionStorage.getItem("selectedRoom");
+    console.log(building, floor, room);
+    if (building != "None"){
+        type = "Building";
+        location = building;
+    }
+    if (floor != "None"){
+        type = "Floor";
+        location += `${floor}00`;
+    }
+    if(room != "None"){
+        type = "Classroom";
+        location = `${building}${room}`;
+    }
+    return {location, type};
+}
+
 function getConfessionTemplate(confession){
     context = {
         firstname: confession.student.firstName,
@@ -8,9 +179,9 @@ function getConfessionTemplate(confession){
         location: confession.contextValue,
         datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
-    console.log("Preparinf confession template...");
-    console.log("Context: ", context);
-    console.log("First Name: ", context.username);
+    // console.log("Preparinf confession template...");
+    // console.log("Context: ", context);
+    // console.log("First Name: ", context.username);
     let postTemplate = `
     <div class="post-item">
         <div class="profilepic-container">
@@ -33,19 +204,74 @@ function getConfessionTemplate(confession){
     `
 return postTemplate;
 }
-// Building - Floor - Room
-const Codes ={
-    "NGE":{
-        1:[1,2,3]
-    },
-    "GLE":{
-        1:[1,2,3]
+function getConfessionTemplate2(confession){
+    context = {
+        firstname: confession.student.firstName,
+        lastname: confession.student.lastName,
+        username: confession.student.username,
+        title: confession.title,
+        content: confession.content,
+        location: confession.contextValue,
+    datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
+    let postTemplate = `
+        <div class="post-item">
+            <div class="profilepic-container">
+                <img src=".jpg" >
+            </div>
+            <div class="post-details">
+                <div class="detail-head">
+                    <p class="post-text" style="letter-spacing: 1px;"><strong>${context.firstname} ${context.lastname}</strong></p>
+                    <span>(${context.username})</span>
+                </div>
+                <hr>
+                <p class="post-title">${context.title}</p>
+                <p class="post-text">${context.content}</p>
+                <div class="datelocation">
+                    <span class="post-info">${context.location}</span>
+                    <span class="post-info">${context.datetime}</span>
+                </div>
+            </div>
+        </div>
+    `;
+    return postTemplate;
 }
 
+function getConfessionTemplate3(confession){
+    context = {
+        firstname: confession.student.firstName,
+        lastname: confession.student.lastName,
+        username: confession.student.username,
+        title: confession.title,
+        content: confession.content,
+        location: confession.contextValue,
+        datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
+    }
+    let postTemplate = `
+    <div class="post-item">
+        <div class="profilepic-container">
+            <img src=".jpg" >
+        </div>
+        <div class="post-details">
+            <div class="detail-head">
+                <p class="post-text" style="letter-spacing: 1px;"><strong>${context.firstname} ${context.lastname}</strong></p>
+                <span>(${context.username})</span>
+                <i class="fa fa-trash" id="delete-icon"></i>
+            </div>
+            <hr>
+            <p class="post-text">${context.content}</p>
+            <div class="datelocation">
+                <span class="post-info">${context.location}</span>
+                <span class="post-info">${context.datetime}</span>
+            </div>
+        </div>
+    </div>
+    `;
+    return postTemplate;
+}
 
+var confessions_global = [];
 $(document).ready(function () {
-    let confessions_global = [];
     var token = sessionStorage.getItem("token");
     var studentId = sessionStorage.getItem("studentId");
     console.log("Token: ", token);
@@ -61,12 +287,13 @@ $(document).ready(function () {
         success: function (response) {
             console.log("Response from server (response): ", response);
             confessions_global = response;
+            response.sort((a, b) => new Date(b.createdOn) - new Date(a.createdOn)); // sort by date
             response.forEach(confession => {
                 // console.log("Confession: ", confession);
                 $('#recentPosts').append(getConfessionTemplate(confession));
                 // get my confessions
                 if (confession.studentId == studentId){
-                    $('#myConfessions').append(getConfessionTemplate(confession));
+                    $('#myConfessions').append(getConfessionTemplate3(confession));
                 }
             });
         },
@@ -78,25 +305,10 @@ $(document).ready(function () {
 
     // post confession
     $('#submit-confession').click(function () {
-        var location = "NGE101" // CHANGE
-        var type = "Classroom" // CHANGE
-        // get selected building room and floor
-        let building = sessionStorage.getItem("selectedBuilding");
-        let floor = sessionStorage.getItem("selectedFloor");
-        let room = sessionStorage.getItem("selectedRoom");
-
-        if (building != "None"){
-            type = "Building";
-            location = building;
-        }
-        if (floor != "None"){
-            type = "Floor";
-            location += `${floor}00`;
-        }
-        if(room != "None"){
-            type = "Classroom";
-            location = `${building}${room}`;
-        }
+        var identifier = getConfessionIdentifier();
+        var location = identifier.location;
+        var type = identifier.type;
+        
         console.log("Location: ", location);
         console.log("Type: ", type);
         var title = $('#confessionTitle').val();

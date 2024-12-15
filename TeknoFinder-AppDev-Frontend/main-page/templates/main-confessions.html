@@ -64,44 +64,7 @@
             <div class="recent-posts-slider">
                 <button class="slider-btn left-btn"><i class="fas fa-chevron-left"></i></button>
                 <div class="recent-posts" id="recentPosts">
-                    <div class="post-item">
-						<div class="profilepic-container">
-							<img src=".jpg" >
-						</div>
-						<!--template sa recent confessions-->
-						<div class="post-details">
-							<div class="detail-head">
-								<p class="post-text" style="letter-spacing: 1px;"><strong>{firstname + lastname}</strong></p>
-								<span>({username})</span>
-							</div>
-							<hr>
-                        	<p class="post-text">{confession content}</p>
-							<div class="datelocation">
-                        		<span class="post-info">{Building #, Floor #, Room #}</span>
-								<span class="post-info">{date | time}</span>
-							</div>
-						</div>
-                    </div>
-
-					<!--sample confessions-->
-					<div class="post-item">
-						<div class="profilepic-container">
-							<img src=".jpg" >
-						</div>
-						
-						<div class="post-details">
-							<div class="detail-head">
-								<p class="post-text" style="letter-spacing: 1px;"><strong>John Doe</strong></p>
-								<span>(@johndoe)</span>
-							</div>
-							<hr>
-                        	<p class="post-text">Had the weirdest encounter at the cafeteria.</p>
-							<div class="datelocation">
-                        		<span class="post-info">Building B, Floor 3</span>
-								<span class="post-info">12-12-2024 | 04:20</span>
-							</div>
-						</div>
-                    </div>
+                    
                 </div>
                 <button class="slider-btn right-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
@@ -115,67 +78,6 @@
 			<div class="recent-posts-slider">
                 <button class="slider-btn left-btn"><i class="fas fa-chevron-left"></i></button>
                 <div class="recent-posts" id="myConfessions">
-					<!--template sa my confessions-->
-                    <div class="post-item">
-						<div class="profilepic-container">
-							<img src=".jpg" >
-						</div>
-						<!--template sa recent confessions-->
-						<div class="post-details">
-							<div class="detail-head">
-								<p class="post-text" style="letter-spacing: 1px;"><strong>{firstname + lastname}</strong></p>
-								<span>({username})</span>
-								<i class="fa fa-trash" id="delete-icon"></i>
-							</div>
-							<hr>
-                        	<p class="post-text">{confession content}</p>
-							<div class="datelocation">
-                        		<span class="post-info">{Building #, Floor #, Room #}</span>
-								<span class="post-info">{date | time}</span>
-							</div>
-						</div>
-                    </div>
-
-                    <!--sample confessions-->
-					<div class="post-item">
-						<div class="profilepic-container">
-							<img src=".jpg" >
-						</div>
-						
-						<div class="post-details">
-							<div class="detail-head">
-								<p class="post-text" style="letter-spacing: 1px;"><strong>John Doe</strong></p>
-								<span>(@johndoe)</span>
-								<i class="fa fa-trash" id="delete-icon"></i>
-							</div>
-							<hr>
-                        	<p class="post-text">Had the weirdest encounter at the cafeteria.</p>
-							<div class="datelocation">
-                        		<span class="post-info">Building B, Floor 3</span>
-								<span class="post-info">12-12-2024 | 04:20</span>
-							</div>
-						</div>
-                    </div>
-
-					<div class="post-item">
-						<div class="profilepic-container">
-							<img src=".jpg" >
-						</div>
-						
-						<div class="post-details">
-							<div class="detail-head">
-								<p class="post-text" style="letter-spacing: 1px;"><strong>John Doe</strong></p>
-								<span>(@johndoe)</span>
-								<i class="fa fa-trash" id="delete-icon"></i>
-							</div>
-							<hr>
-                        	<p class="post-text">Had the weirdest encounter at the cafeteria.</p>
-							<div class="datelocation">
-                        		<span class="post-info">Building B, Floor 3</span>
-								<span class="post-info">12-12-2024 | 04:20</span>
-							</div>
-						</div>
-                    </div>
                 </div>
                 <button class="slider-btn right-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
@@ -214,25 +116,9 @@
 		</div>
 
 		<div class="confession-results">
-			<div class="post-results">
-				<div class="post-item">
-					<div class="profilepic-container">
-						<img src=".jpg" >
-					</div>
-					<!--template sa results confessions-->
-					<div class="post-details">
-						<div class="detail-head">
-							<p class="post-text" style="letter-spacing: 1px;"><strong>{firstname + lastname}</strong></p>
-							<span>({username})</span>
-						</div>
-						<hr>
-						<p class="post-text">{confession content}</p>
-						<div class="datelocation">
-							<span class="post-info">{Building #, Floor #, Room #}</span>
-							<span class="post-info">{date | time}</span>
-						</div>
-					</div>
-				</div>
+			<div class="post-results" id="filteredConfessions">
+				<!--template sa filtered confessions-->
+
 			</div>
 		</div>
     </section>
@@ -274,124 +160,6 @@
 	<script src="../js/main-page.js" defer></script>
 	<script src="../js/confessions.js" defer></script>
 	<script>
-        const sliders = document.querySelectorAll('.recent-posts-slider');
-
-        sliders.forEach(slider => {
-            const leftBtn = slider.querySelector('.left-btn');
-            const rightBtn = slider.querySelector('.right-btn');
-            const posts = slider.querySelector('.recent-posts');
-
-            let scrollAmount = 0;
-            const scrollStep = 300;
-
-            rightBtn.addEventListener('click', () => {
-                posts.scrollLeft += scrollStep;
-            });
-
-            leftBtn.addEventListener('click', () => {
-                posts.scrollLeft -= scrollStep;
-            });
-        });
-		
-		const modal = document.getElementById("addConfessionModal");
-		const openModalBtn = document.getElementById("openAddConfessionModal");
-		const closeModalBtn = document.getElementById("closeModal");
-
-		openModalBtn.onclick = function () {
-			modal.style.display = "block";
-		}
-
-		closeModalBtn.onclick = function () {
-			modal.style.display = "none";
-		}
-
-		window.onclick = function (event) {
-			if (event.target === modal) {
-				modal.style.display = "none";
-			}
-		}
-
-		document.getElementById('addConfessionForm').addEventListener('submit', function (event) {
-			event.preventDefault(); 
-			const confessionText = document.getElementById("confessionText").value;
-			if (confessionText) {
-				alert('Confession added: ' + confessionText);
-				modal.style.display = "none";
-			}
-		});
-
-		const buildingFilter = document.querySelector('.building-filter');
-		const floorFilter = document.querySelector('.floor-filter');
-		const roomFilter = document.querySelector('.room-filter');
-
-		const roomOptions = {
-			"NGE": {
-				1: ['101', '102', '103', '104', '105'],
-				2: ['201', '202', '203', '204', '205'],
-				3: ['301', '302', '303', '304', '305'],
-				4: ['401', '402', '403', '404', '405']
-			},
-			"RTL": {
-				1: ['101', '102', '103', '104', '105'],
-				2: ['201', '202', '203', '204', '205'],
-				3: ['301', '302', '303', '304', '305'],
-				4: ['401', '402', '403', '404', '405']
-			},
-			"GLE": {
-				1: ['101', '102', '103', '104', '105'],
-				2: ['201', '202', '203', '204', '205'],
-				3: ['301', '302', '303', '304', '305'],
-				4: ['401', '402', '403', '404', '405']
-			}
-		};
-
-		buildingFilter.addEventListener('change', () => {
-			const selectedBuilding = buildingFilter.value;
-			sessionStorage.setItem('selectedBuilding', selectedBuilding);
-			sessionStorage.setItem('selectedFloor', 'None');
-			sessionStorage.setItem('selectedRoom', 'None');
-			floorFilter.innerHTML = '<option value="None">Select Floor</option>';
-			roomFilter.innerHTML = '<option value="None">Select Room</option>';
-
-			if (roomOptions[selectedBuilding]) {
-				const floors = Object.keys(roomOptions[selectedBuilding]);
-				floors.forEach(floor => {
-					const option = document.createElement('option');
-					option.value = floor;
-					option.textContent = `Floor ${floor}`;
-					floorFilter.appendChild(option);
-				});
-			}
-		});
-
-		floorFilter.addEventListener('change', () => {
-			const selectedBuilding = buildingFilter.value;
-			const selectedFloor = floorFilter.value;
-			sessionStorage.setItem('selectedBuilding', selectedBuilding);
-			sessionStorage.setItem('selectedFloor', selectedFloor);
-			sessionStorage.setItem('selectedRoom', 'None')
-			roomFilter.innerHTML = '<option value="None">Select Room</option>';
-
-			if (roomOptions[selectedBuilding] && roomOptions[selectedBuilding][selectedFloor]) {
-				const rooms = roomOptions[selectedBuilding][selectedFloor];
-				rooms.forEach(room => {
-					const option = document.createElement('option');
-					option.value = room;
-					sessionStorage.setItem('selectedRoom', room);
-					option.textContent = `Room ${room}`;
-					roomFilter.appendChild(option);
-				});
-			}
-		});
-
-		roomFilter.addEventListener('change', () => {
-			const selectedBuilding = buildingFilter.value;
-			const selectedFloor = floorFilter.value;
-			const selectedRoom = roomFilter.value;
-			sessionStorage.setItem('selectedBuilding', selectedBuilding);
-			sessionStorage.setItem('selectedFloor', selectedFloor);
-			sessionStorage.setItem('selectedRoom', selectedRoom);
-		});
     </script>
 </body>
 </html>
