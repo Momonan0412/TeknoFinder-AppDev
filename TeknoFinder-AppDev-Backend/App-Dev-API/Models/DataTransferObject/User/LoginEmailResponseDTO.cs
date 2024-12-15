@@ -2,7 +2,7 @@
 
 namespace AppDev.API.Models.DataTransferObject.User
 {
-    public class LoginResponseDTO
+    public class LoginEmailResponseDTO
     {
         public new string Email { get; set; }
         public string AccessToken { get; set; }
