@@ -1,4 +1,6 @@
 using AppDev.API.Data;
+using AppDev.API.Interface;
+using AppDev.API.Models.Entities;
 using AppDev.API.Models.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(optiions => 
 optiions.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Service
+builder.Services.AddScoped<IWaypointService, WaypointService>();
+builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ISchedule, ScheduleService>();
+builder.Services.AddScoped<IConfession, ConfessionService>();
 
 builder.Services.AddAuthentication(optiions =>
 {

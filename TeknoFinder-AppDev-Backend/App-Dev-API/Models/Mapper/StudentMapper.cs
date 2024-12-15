@@ -13,6 +13,7 @@ namespace AppDev.API.Models.Mapper
             {
                 FirstName = student.FirstName,
                 LastName = student.LastName,
+                StudentNumber = student.StudentNumber,
                 Program = student.Program.ToString(),
                 YearLevel = student.YearLevel.ToString(),
                 Status = student.Status.ToString()
@@ -26,6 +27,7 @@ namespace AppDev.API.Models.Mapper
             {
             FirstName = dto.FirstName,
             LastName = dto.LastName,
+            StudentNumber = dto.StudentNumber,
             Program = Enum.Parse<StudentProgram>(dto.Program),
             YearLevel = Enum.Parse<YearLevel>(dto.YearLevel),
             Status = Enum.Parse<Status>(dto.Status)

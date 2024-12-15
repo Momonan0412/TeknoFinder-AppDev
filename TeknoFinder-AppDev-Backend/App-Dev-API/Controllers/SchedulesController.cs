@@ -2,6 +2,7 @@
 using AppDev.API.Migrations;
 using AppDev.API.Models.DataTransferObject.Schedule;
 using AppDev.API.Models.Entities;
+using AppDev.API.Models.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,100 +12,59 @@ namespace AppDev.API.Controllers
     [ApiController]
     public class SchedulesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        public SchedulesController(ApplicationDbContext context)
+        private readonly ScheduleService _scheduleService;
+
+        public SchedulesController(ScheduleService scheduleService)
         {
-            _context = context;
+            _scheduleService = scheduleService;
         }
+
         [HttpGet("Debugging")]
         public async Task<IActionResult> GetAllSchedulesDebug()
         {
-            var scedules = await _context.Schedules.ToListAsync();
-            return Ok(scedules);
+            var schedules = await _scheduleService.GetAllSchedulesAsync();
+            return Ok(schedules);
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAllSchedules()
         {
-            var scedules = await _context.Schedules.Select(s=> new ScheduleDTO()
-            {
-                SubjectTitle = s.SubjectTitle,
-                Section = s.Section,
-                Classroom = s.Classroom,
-                Day = s.Day,
-                StartsAt = s.StartsAt,
-                EndsAt = s.EndsAt
-            }).
-            ToListAsync();
-            return Ok(scedules);
+            var schedules = await _scheduleService.GetAllSchedulesAsync();
+            return Ok(schedules);
         }
+
         [HttpGet("{id:guid}")]
-        public async Task <IActionResult> GetScheduleById(Guid id)
+        public async Task<IActionResult> GetScheduleById(Guid id)
         {
-            //var sched = await _context.Schedules.Select(s=> new ScheduleDTO()
-            //{
-            //    SubjectTitle = s.SubjectTitle,
-            //    Section = s.Section,
-            //    Classroom = s.Classroom,
-            //    Day = s.Day,
-            //    StartsAt = s.StartsAt,
-            //    EndsAt = s.EndsAt
-            //}).
-            //SingleOrDefaultAsync();
-            var sched = await _context.Schedules.FindAsync(id);
-            if(sched == null)
-            {
-                return NotFound("Schedule is not found");
-            }
-            return Ok(sched);
+            var schedule = await _scheduleService.GetScheduleByIdAsync(id);
+            if (schedule == null)
+                return NotFound("Schedule not found");
+            return Ok(schedule);
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateSchedule(ScheduleDTO scheduleDTO)
         {
-            Schedule newSched = new Schedule()
-            {
-                SubjectTitle = scheduleDTO.SubjectTitle,
-                Section = scheduleDTO.Section,
-                Classroom = scheduleDTO.Classroom,
-                Day = scheduleDTO.Day,
-                StartsAt = scheduleDTO.StartsAt,
-                EndsAt = scheduleDTO.EndsAt,
-            };
-            _context.Schedules.Add(newSched);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetScheduleById), new { id = newSched.ScheduleId }, newSched);
-
+            var newSchedule = await _scheduleService.CreateScheduleAsync(scheduleDTO);
+            return CreatedAtAction(nameof(GetScheduleById), new { id = newSchedule.ScheduleId }, newSchedule);
         }
+
         [HttpDelete("{id:guid}")]
-        public async Task <IActionResult> DeleteSchedule(Guid id)
+        public async Task<IActionResult> DeleteSchedule(Guid id)
         {
-            var sched = await _context.Schedules.FindAsync(id);
-            if (sched == null)
-            {
+            var success = await _scheduleService.DeleteScheduleAsync(id);
+            if (!success)
                 return NotFound("Schedule not found");
-            }
-            _context.Schedules.Remove(sched);
-            await _context.SaveChangesAsync();
             return Ok("Successfully deleted the schedule");
         }
+
         [HttpPut("update/{id:guid}")]
-        public async Task <IActionResult> UpdateSchedule(Guid id, ScheduleDTO schedDTO)
+        public async Task<IActionResult> UpdateSchedule(Guid id, ScheduleDTO scheduleDTO)
         {
-            var sched = await _context.Schedules.FindAsync(id);
-            if(sched == null)
-            {
+            var success = await _scheduleService.UpdateScheduleAsync(id, scheduleDTO);
+            if (!success)
                 return NotFound("Schedule not found");
-            }
-            sched.SubjectTitle = schedDTO.SubjectTitle;
-            sched.Section = schedDTO.Section;
-            sched.Classroom = schedDTO.Classroom;
-            sched.Day = schedDTO.Day;
-            sched.StartsAt = schedDTO.StartsAt;
-            sched.EndsAt = schedDTO.EndsAt;
-
-            await _context.SaveChangesAsync();
-            return Ok(sched);
+            return Ok("Schedule updated successfully");
         }
-
-        
     }
 }

@@ -15,6 +15,7 @@ namespace AppDev.API.Models.Mapper
             return new UserDTO
             {
                 Email = user.Email,
+                Username = user.Username,
                 Password = user.Password,
                 IsActive = user.IsActive,
             };
@@ -26,6 +27,7 @@ namespace AppDev.API.Models.Mapper
             return new User
             {
                 Email = dto.Email,
+                Username = dto.Username,
                 Password = dto.Password,
                 IsActive = dto.IsActive,
             };
@@ -40,6 +42,7 @@ namespace AppDev.API.Models.Mapper
             return new User
             {
                 Email = dto.Email,
+                Username = dto.Username,
                 Password = hashedPassword,
                 IsActive = dto.IsActive,
             };

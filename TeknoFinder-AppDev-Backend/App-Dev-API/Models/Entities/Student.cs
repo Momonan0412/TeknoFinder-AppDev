@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppDev.API.Models.Entities
 {
-
     public class Student
     {
         [Key]
-        public Guid StudentIdentification { get; set; } = Guid.NewGuid(); // Automatically generate Guid
-
+        public Guid StudentIdentification { get; set; }
+        public ICollection<Confession> Confessions { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public String StudentNumber { get; set; }
         [Required]
         [MaxLength(100)]
         public string FirstName { get; set; }
