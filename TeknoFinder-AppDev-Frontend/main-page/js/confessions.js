@@ -255,7 +255,7 @@ function getConfessionTemplate(confession){
         <div class="post-details">
             <div class="detail-head">
                 <p class="post-text" style="letter-spacing: 1px;"><strong>${context.firstname} ${context.lastname}</strong></p>
-                <span>(${context.username})</span>
+            <!-- <span>(${context.username})</span> -->
             </div>
             <hr>
             <p class="post-title">${context.title}</p>
@@ -288,7 +288,7 @@ function getConfessionTemplate2(confession){
             <div class="post-details">
                 <div class="detail-head">
                     <p class="post-text" style="letter-spacing: 1px;"><strong>${context.firstname} ${context.lastname}</strong></p>
-                    <span>(${context.username})</span>
+                <!-- <span>(${context.username})</span> -->
                 </div>
                 <hr>
                 <p class="post-title">${context.title}</p>
@@ -322,7 +322,7 @@ function getConfessionTemplate3(confession){
         <div class="post-details">
             <div class="detail-head">
                 <p class="post-text" style="letter-spacing: 1px;"><strong>${context.firstname} ${context.lastname}</strong></p>
-                <span>(${context.username})</span>
+               <!-- <span>(${context.username})</span> -->
                 <i class="fa fa-trash" id="delete-icon"></i>
             </div>
             <hr>
@@ -351,11 +351,11 @@ $(document).ready(function () {
         headers: {
           Authorization: `Bearer ${token}`, // Add JWT token in Authorization header
         },
-        success: function (response) {
-            console.log("Response from server (response): ", response);
-            confessions_global = response;
-            response.sort((a, b) => new Date(b.createdOn) - new Date(a.createdOn)); // sort by date
-            response.forEach(confession => {
+        success: function (res) {
+            confessions_global = res;
+            res.sort((a, b) => new Date(b.createdOn) - new Date(a.createdOn)); // sort by date
+            console.log("Response from server (response): ", res);
+            res.forEach(confession => {
                 // console.log("Confession: ", confession);
                 $('#recentPosts').append(getConfessionTemplate(confession));
                 // get my confessions
