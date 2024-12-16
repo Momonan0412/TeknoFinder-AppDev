@@ -17,13 +17,13 @@ sliders.forEach(slider => {
 });
 
 const profilepics = [
-    'profile-pic-one.png',
-    'profile-pic-two.png',
-    'profile-pic-three.png',
-    'profile-pic-four.png',
-    'profile-pic-five.png',
-    'profile-pic-six.png',
-    'profile-pic-seven.png'
+    '../img/profile-pic-one.png',
+    '../img/profile-pic-two.png',
+    '../img/profile-pic-three.png',
+    '../img/profile-pic-four.png',
+    '../img/profile-pic-five.png',
+    '../img/profile-pic-six.png',
+    '../img/profile-pic-seven.png'
 ];
 
 function stringToNumber(input, range = profilepics.length) {
