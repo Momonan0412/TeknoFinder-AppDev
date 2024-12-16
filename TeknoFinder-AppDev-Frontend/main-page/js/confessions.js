@@ -233,6 +233,7 @@ function getConfessionTemplate(confession){
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
+        studentId: confession.studentId,
         datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     // console.log("Preparinf confession template...");
@@ -241,7 +242,7 @@ function getConfessionTemplate(confession){
     let postTemplate = `
     <div class="post-item">
         <div class="profilepic-container">
-            <img src="" style="min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; ">
+            <img src="${getProfilePic(context.studentId)}" style="min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; ">
         </div>
         <div class="post-details">
             <div class="detail-head">
@@ -268,12 +269,13 @@ function getConfessionTemplate2(confession){
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
+        studentId: confession.studentId,
     datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     let postTemplate = `
         <div class="post-item">
             <div class="profilepic-container">
-                <img src=".jpg" >
+                <img src="${getProfilePic(context.studentId)}" >
             </div>
             <div class="post-details">
                 <div class="detail-head">
@@ -301,12 +303,13 @@ function getConfessionTemplate3(confession){
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
+        studentId: confession.studentId,
         datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     let postTemplate = `
     <div class="post-item">
         <div class="profilepic-container">
-            <img src=".jpg" >
+            <img src="${getProfilePic(context.studentId)}" >
         </div>
         <div class="post-details">
             <div class="detail-head">
