@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map with Dynamic Markers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times;</span>
+            <label for="dropdown">Please select a number:</label>
+            <select id="dropdown">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+                <option value="7">Option 7</option>
+                <option value="8">Option 8</option>
+            </select>
+            <button onclick="confirmSelection()">Confirm</button>
+        </div>
+    </div>
+    
+    <!-- Button to open the modal -->
+    <button onclick="openModal()">Open Modal</button>
+
+    <script>
+        const NGE_F1_Waypoint = [
+            ['A', 'Node A'],
+            ['B', 'Node B'],
+            ['C', 'Node C'],
+            ['D', 'Node D'],
+            ['E', 'Node E'],
+            ['F', 'Node F'],
+            ['G', 'Node G'],
+            ['H', 'Node H'],
+            ['I', 'Node I'],
+            ['J', 'Node J'],
+            ['K', 'Node K'],
+            ['L', 'Node L'],
+            ['M', 'Node M'],
+        ];
+        
+            // Modal handling
+            const modal = document.getElementById("myModal");
+            const openModalBtn = document.getElementById("openModalBtn");
+            
+            function openModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+    // Function to handle option selection and show corresponding letters
+    function getLetters(option) {
+        let letters = [];
+        switch(option) {
+            case '1':
+                letters = ['A', 'M', 'L'];
+                break;
+            case '2':
+                letters = ['A', 'M', 'L', 'K'];
+                break;
+            case '3':
+                letters = ['A', 'M', 'L', 'K', 'J'];
+                break;
+            case '4':
+                letters = ['A', 'M', 'L', 'K', 'J', 'H'];
+                break;
+            case '5':
+                letters = ['A', 'M', 'L', 'K', 'J', 'H', 'I'];
+                break;
+            case '6':
+                letters = ['A', 'B', 'C'];
+                break;
+            case '7':
+                letters = ['A', 'B', 'C', 'E'];
+                break;
+            case '8':
+                letters = ['A', 'B', 'C', 'F', 'G'];
+                break;
+            default:
+                console.log('Invalid option');
+                return;
+        }
+
+        // Now, get the corresponding PathNodes for each letter
+        letters.forEach(letter => {
+            const node = NGE_F1_Waypoint.find(entry => entry[0] === letter);
+            if (node) {
+                console.log(`Letter: ${letter}, Node: ${node[1]}`);
+            } else {
+                console.log(`No node found for letter: ${letter}`);
+            }
+        });
+    }
+
+    // Function to handle selection confirmation
+    function confirmSelection() {
+        const dropdown = document.getElementById("dropdown");
+        const selectedOption = dropdown.value; // Get selected option value
+        getLetters(selectedOption); // Call the getLetters function with the selected value
+        closeModal(); // Close the modal after selection
+    }
+    </script>
+</body>
+</html>

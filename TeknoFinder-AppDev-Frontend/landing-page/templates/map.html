@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <!-- Leaflet javascript-->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <link rel="stylesheet" href="../css/map.css">
+    </head>
+
+    <body>
+        <div id="map_sidebar">
+            <img style="height: 80px; width: 80px;" src="../assets/teknofinder-logo.png">
+            <div id="top_half">
+                <div id="home" class="sidebar_button">
+                    <i style="font-size: 40px;" class="fas fa-home"></i>
+                    <p>Home</p>
+                </div>
+                <div id="navigator" class="sidebar_button">
+                    <i style="font-size: 40px;" class="fas fa-search"></i>
+                    <p>Search</p>
+                </div>
+                <div onclick="GetWaypoint()" class="sidebar_button">
+                    <i style="font-size: 40px;" class="fas fa-bookmark"></i>
+                    <p>Saved</p>
+                </div>
+                <div class="sidebar_button">
+                    <i style="font-size: 40px;" class="far fa-clock"></i>
+                    <p>Schedule</p>
+                </div>
+            </div>
+
+            <div id="bottom_half">
+                <div class="sidebar_button">
+                    <i style="font-size: 40px;" class="fa fa-user"></i>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+        <div id="debug_menu">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            
+                <label for="coordX">X coordinate: </label>
+                <input type="text" id="coordX" name="coordX">
+            
+                <label for="coordY">Y coordinate: </label>
+                <input type="text" id="coordY" name="coordY">
+            </div>
+            <button onclick="DeleteWaypoint()">test</button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span onclick="closeModal()" class="close">&times;</span>
+                    <label for="dropdown">Please select a number:</label>
+                    <select id="dropdown">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                        <option value="6">Option 6</option>
+                        <option value="7">Option 7</option>
+                        <option value="8">Option 8</option>
+                    </select>
+                    <button onclick="confirmSelection()">Confirm</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+
+    <script src="../js/map.js"></script>
+</html>
