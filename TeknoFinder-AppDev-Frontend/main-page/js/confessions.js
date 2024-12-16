@@ -15,9 +15,17 @@ sliders.forEach(slider => {
         posts.scrollLeft -= scrollStep;
     });
 });
-const profilepics =[
 
+const profilepics = [
+    'profile-pic-one.png',
+    'profile-pic-two.png',
+    'profile-pic-three.png',
+    'profile-pic-four.png',
+    'profile-pic-five.png',
+    'profile-pic-six.png',
+    'profile-pic-seven.png'
 ];
+
 function stringToNumber(input, range = profilepics.length) {
     let hash = 0;
 
