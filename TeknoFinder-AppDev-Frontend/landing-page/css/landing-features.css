@@ -316,14 +316,37 @@ header {
 	font-size: 30px;
 }
 
+/* Feature Section */
+.feature-section {
+	padding-top: 100px;
+	text-align: left;
+	margin-left: 210px;
+}
+
+.feature-section h1 {
+	font-size: 70px;
+	margin: 0;
+	background: linear-gradient(180deg, #601325, #d39a0b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.feature-section h2 {
+	font-size: 30px;
+	margin: 0;
+	color: #601325;
+	font-weight: bold;
+}
+
+/* Feature Image Slider*/
 .feature-slider {
     position: relative;
     width: 100%;
     height: 700px;
     overflow: hidden;
-    border: 3px solid white;
+    border: 10px solid #601325;
     border-radius: 40px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .slider {
@@ -331,7 +354,7 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    animation: slide 12s infinite;
+    animation: slide 5s infinite;
 }
 
 .slider img {
@@ -357,22 +380,38 @@ header {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+	opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+	flex-direction: column;
+}
+
+.feature-slider:hover .feature-info {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+.feature-info p {
+	font-size: 20px;
 }
 
 .tab-container {
     width: 100%;
+	margin-bottom: 130px;
 }
 
 .profile-tab-section {
     display: flex;
 	flex-direction: column;
 	margin: 100px 150px;
+	margin-top: -30px;
 }
 
 .tab-buttons {
     display: flex;
     flex-direction: row;
-	margin-left: 100px;
+	margin-left: 900px;
 
 }
 
