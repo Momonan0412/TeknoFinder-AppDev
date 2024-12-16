@@ -23,7 +23,7 @@
                     <i style="font-size: 40px;" class="fas fa-home"></i>
                     <p>Home</p>
                 </div>
-                <div id="navigator" class="sidebar_button">
+                <div id="navigator" class="sidebar_button" onclick=" openModal()">
                     <i style="font-size: 40px;" class="fas fa-search"></i>
                     <p>Search</p>
                 </div>
@@ -58,23 +58,23 @@
                 <input type="text" id="coordY" name="coordY">
             </div>
             <button onclick="DeleteWaypoint()">test</button>
+        </div>
 
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span onclick="closeModal()" class="close">&times;</span>
-                    <label for="dropdown">Select your Destination:</label>
-                    <select id="dropdown">
-                        <option value="1">Computer Lab 101</option>
-                        <option value="2">Computer Lab 102</option>
-                        <option value="3">Computer Lab 103</option>
-                        <option value="4">Computer Lab 104</option>
-                        <option value="5">Computer Lab 105</option>
-                        <option value="6">Case Room</option>
-                        <option value="7">SMDTC</option>
-                        <option value="8">College of Computer Studies</option>
-                    </select>
-                    <button onclick="confirmSelection()">Confirm</button>
-                </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <label for="dropdown">Select your Destination:</label>
+                <select id="dropdown">
+                    <option value="1">Computer Lab 101</option>
+                    <option value="2">Computer Lab 102</option>
+                    <option value="3">Computer Lab 103</option>
+                    <option value="4">Computer Lab 104</option>
+                    <option value="5">Computer Lab 105</option>
+                    <option value="6">Case Room</option>
+                    <option value="7">SMDTC</option>
+                    <option value="8">College of Computer Studies</option>
+                </select>
+                <button onclick="confirmSelection()">Confirm</button>
             </div>
         </div>
         

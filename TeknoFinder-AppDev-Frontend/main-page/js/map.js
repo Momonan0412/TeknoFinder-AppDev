@@ -166,11 +166,10 @@ var imageUrl = '../maps/NGE_test.png';
                 modal.style.display = "block";
             }
 
-            /*
+            
             function closeModal() {
                 modal.style.display = "none";
             }
-            */
 
     // Function to handle option selection and show corresponding letters
     function getPathNode(letter){
