@@ -172,7 +172,7 @@ button {
 /* register General Styles */
 
 .register-form {
-    min-height: 113vh; /* Ensures full height */
+    min-height: 122vh; /* Ensures full height */
     background-image:
         linear-gradient(to right, white 0%, white 50%, transparent 90%),
         url("../img/bg-six.jpg");
