@@ -144,7 +144,7 @@ header {
 								  rgba(255, 255, 255, 1) 80%,
 								  rgba(255, 255, 255, 0.5) 95%,
 								  rgba(255, 255, 255, 0.2) 100%),
-								  url('../img/location-img.png');
+								  url('../img/feature-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 25px;
@@ -154,69 +154,76 @@ header {
     text-align: center;
     flex-direction: column;
     user-select: none;
+	padding-bottom: 250px;
 }
 
 .get-started-section .auth-nav {
 	margin-right: 90px;
 }
 
-.discere-overview {
-	//border: 1px solid yellow;
+.teknofinder-overview {
 	padding-bottom: 50px;
-	margin-top: 130px;
+	margin-top: 100px;
 }
 
-.discere-overview span {
-	//border: 1px solid blue;
+.teknofinder-overview span {
     display: inline-block;
     width: 57.4vw;;
 }
 
-.discere-overview .overview-subheader{
+.teknofinder-overview .overview-subheader{
 	color: white;
-	font-size: 28px;
+	font-size: 25px;
 	font-weight: bold;
 	letter-spacing: 1.5px;
 	margin-bottom: 40px;
-	background: #002F19;
+	background: #601325;
 	padding: 15px 50px;
 	border-radius: 50px;
 	width: fit-content;
 }
 
-.discere-overview .overview-header {
-    font-family: 'Vensfolk', sans-serif;
-    font-size: 95px;
+.teknofinder-overview .overview-header {
+    font-size: 90px;
     font-weight: bold;
-    letter-spacing: 6px;
-    background: linear-gradient(180deg, #002F19, #00954F);
+    letter-spacing: 3px;
+    background: linear-gradient(180deg, #601325, #f6c302);
     -webkit-background-clip: text;
     color: transparent;
+	width: 100%;
 }
 
-.discere-overview hr {
+.teknofinder-overview hr {
     width: 100px;
     height: 10px;
-    background-color: #002F19;
+    background-color: #d2990a;
     border: none;
 	border-radius: 10px;
 	margin-bottom: 30px;
 }
 
-.discere-overview .overview-content{
-	font-size: 22px;
+.teknofinder-overview .overview-content{
+	font-size: 20px;
 	font-weight: 300;
 	letter-spacing: 1.1px;
-	margin-bottom: 70px;
+	line-height: 1.2;
+	margin-bottom: 50px;
 }
 
-.discere-overview a:hover {
+.teknofinder-overview a:hover {
 	background-color: white;
+}
+
+.target {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -250px;
 }
 
 .target-audience {
 	width: 80vw;
-	background-color: #002F19;
+	background:  #601325;
 	border-radius: 40px;
 	display: flex;
 	padding: 0px 30px;
@@ -241,7 +248,7 @@ header {
 }
 
 .target-audience .targets h2{
-	color: #00ff7f;
+	color: #f6c305;
 	letter-spacing: 1.3px;
 	font-size: 30px;
 }

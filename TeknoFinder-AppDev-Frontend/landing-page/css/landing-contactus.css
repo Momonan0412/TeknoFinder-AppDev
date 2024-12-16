@@ -156,7 +156,7 @@ header {
 
 .contact-head {
 	font-size: 90px;
-	background: linear-gradient(90deg, #601426, #f6c302);
+	background: linear-gradient(180deg, #601426, #f6c302);
 	-webkit-background-clip: text;
 	color: transparent;
 	font-weight: bold;
@@ -166,7 +166,7 @@ header {
 	font-size: 25px;
 	padding: 20px 40px;
 	border-radius: 30px;
-	background: linear-gradient(180deg, #601426, #f6c302);
+	background: #601426;
 	color: white;
 	font-weight: bold;
 	margin-bottom: 40px;
@@ -213,11 +213,11 @@ header {
 }
 
 .contact-info:hover p{
-    color: black;
+    color: #601325;
 }
 
 .contact-info:hover span{
-    color: #f6c303;
+    color: black;
 }
 
 .contact-info p{
