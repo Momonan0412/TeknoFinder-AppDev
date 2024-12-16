@@ -15,6 +15,23 @@ sliders.forEach(slider => {
         posts.scrollLeft -= scrollStep;
     });
 });
+const profilepics =[
+
+];
+function stringToNumber(input, range = profilepics.length) {
+    let hash = 0;
+
+    // Generate a hash from the input string
+    for (let i = 0; i < input.length; i++) {
+        hash = input.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    // Ensure the number is within the desired range
+    return Math.abs(hash % range);
+}
+function getProfilePic(studentId){
+    return profilepics[stringToNumber(studentId)];
+}
 
 const modal = document.getElementById("addConfessionModal");
 const openModalBtn = document.getElementById("openAddConfessionModal");
@@ -216,6 +233,7 @@ function getConfessionTemplate(confession){
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
+        studentId: confession.studentId,
         datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     // console.log("Preparinf confession template...");
@@ -224,7 +242,7 @@ function getConfessionTemplate(confession){
     let postTemplate = `
     <div class="post-item">
         <div class="profilepic-container">
-            <img src="profile-avatar.png" style="min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; ">
+            <img src="${getProfilePic(context.studentId)}" style="min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; ">
         </div>
         <div class="post-details">
             <div class="detail-head">
@@ -251,12 +269,13 @@ function getConfessionTemplate2(confession){
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
+        studentId: confession.studentId,
     datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     let postTemplate = `
         <div class="post-item">
             <div class="profilepic-container">
-                <img src=".jpg" >
+                <img src="${getProfilePic(context.studentId)}" >
             </div>
             <div class="post-details">
                 <div class="detail-head">
@@ -284,12 +303,13 @@ function getConfessionTemplate3(confession){
         title: confession.title,
         content: confession.content,
         location: confession.contextValue,
+        studentId: confession.studentId,
         datetime: new Date(confession.createdOn).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' })
     }
     let postTemplate = `
     <div class="post-item">
         <div class="profilepic-container">
-            <img src=".jpg" >
+            <img src="${getProfilePic(context.studentId)}" >
         </div>
         <div class="post-details">
             <div class="detail-head">
