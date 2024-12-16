@@ -8,7 +8,7 @@ namespace AppDev.API.Models.DataTransferObject.Schedule
         public string SubjectTitle { get; set; }
         public string Section { get; set; }
         public string Classroom { get; set; }
-        public string Day { get; set; }
+        public Day Day { get; set; }
         public TimeOnly StartsAt { get; set; }
         public TimeOnly EndsAt { get; set; }
     }

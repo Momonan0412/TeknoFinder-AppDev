@@ -18,7 +18,7 @@ namespace AppDev.API.Models.Service
                 SubjectTitle = s.SubjectTitle,
                 Section = s.Section,
                 Classroom = s.Classroom.ToString(),
-                Day = s.Day.ToString(),
+                Day = s.Day,
                 StartsAt = s.StartsAt,
                 EndsAt = s.EndsAt
             }).ToListAsync();
@@ -35,7 +35,7 @@ namespace AppDev.API.Models.Service
                     SubjectTitle = s.SubjectTitle,
                     Section = s.Section,
                     Classroom = s.Classroom.ToString(),
-                    Day = s.Day.ToString(),
+                    Day = s.Day,
                     StartsAt = s.StartsAt,
                     EndsAt = s.EndsAt
                 })
@@ -51,7 +51,8 @@ namespace AppDev.API.Models.Service
                 Section = scheduleDTO.Section,
                 // Enum.Parse<ConfessionContextType>(confessionDTO.ContextType),
                 Classroom = Enum.Parse<Classroom>(scheduleDTO.Classroom),
-                Day = Enum.Parse<Day>(scheduleDTO.Day),
+                //Day = Enum.Parse<Day>(scheduleDTO.Day),
+                Day = scheduleDTO.Day,
                 StartsAt = scheduleDTO.StartsAt,
                 EndsAt = scheduleDTO.EndsAt
             };
@@ -69,7 +70,8 @@ namespace AppDev.API.Models.Service
             schedule.SubjectTitle = scheduleDTO.SubjectTitle;
             schedule.Section = scheduleDTO.Section;
             schedule.Classroom = Enum.Parse<Classroom>(scheduleDTO.Classroom);
-            schedule.Day = Enum.Parse<Day>(scheduleDTO.Day);
+            //schedule.Day = Enum.Parse<Day>(scheduleDTO.Day);
+            schedule.Day = scheduleDTO.Day;
             schedule.StartsAt = scheduleDTO.StartsAt;
             schedule.EndsAt = scheduleDTO.EndsAt;
 

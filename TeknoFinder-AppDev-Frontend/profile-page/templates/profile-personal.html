@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TeknoFinder - About Us</title>
-	<link rel="stylesheet" href="../css/profile-personal.css">
+	<link rel="stylesheet" href="../css/profile-personal.css">	
+	<link rel="stylesheet" href="../css/schedule.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Anybody&display=swap" rel="stylesheet">
@@ -94,7 +95,7 @@
 					</button>					
 					<button class="tab-btn active" data-tab="personal-info">Personal Information</button>
 					<button class="tab-btn" data-tab="saved-classroom">Saved Classroom</button>
-					<button class="tab-btn" data-tab="my-schedule">My Schedule</button>
+					<button class="tab-btn" data-tab="my-schedule" onclick = "openSchedule();">My Schedule</button>
 					<button class="tab-btn" data-tab="profile-settings">Profile Settings</button>
 				</div>
 
@@ -160,8 +161,17 @@
 					</div>
 
 					<div class="tab-panel" id="my-schedule">
-						<h2>My Schedule</h2>
-						<p>User’s schedule information goes here.</p>
+						<!-- <h2>My Schedule</h2>
+						<p>User’s schedule information goes here.</p> -->
+						<div>
+							<div class="divider-container">
+								<h1 class="content-divider">Student's Personal Information</h1>
+							</div>
+							<div class="schedule-container" id="schedule-modal">
+								<!-- Schedule table will be dynamically inserted here -->
+							</div>
+						</div>
+						
 					</div>
 
 					<div class="tab-panel" id="profile-settings">
@@ -177,7 +187,7 @@
 	{% comment %} <script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../../main-page/js/main-page.js" defer></script> {% endcomment %}
 	-->
-
+	<script src="../js/schedules.js"></script> 
 	<script>
 		const tabButtons = document.querySelectorAll('.tab-btn');
 		const tabPanels = document.querySelectorAll('.tab-panel');
