@@ -267,17 +267,26 @@ var imageUrl = '../maps/NGE_test.png';
         
 
         console.log(`Array: ${Array_letters}`);
-        for (let i = 0; i < Array_letters.length - 1; i++) {
-            const num1 = Array_letters[i];
-            const num2 = Array_letters[i + 1];
-            console.log(`Pair: ${num1}, Node: ${num2}`);
-
-            var marker1 = getPathNode(num1);
-            var marker2 = getPathNode(num2);
-
-            var marker1coords = marker1.getLatLng();
-            var marker2coords = marker2.getLatLng();
-            
-            travel[i] = L.polyline([marker1coords, marker2coords]).addTo(map);
+        try{
+            for (let i = 0; i < Array_letters.length - 1; i++) {
+                const num1 = Array_letters[i];
+                const num2 = Array_letters[i + 1];
+                console.log(`Pair: ${num1}, Node: ${num2}`);
+    
+                var marker1 = getPathNode(num1);
+                var marker2 = getPathNode(num2);
+    
+                var marker1coords = marker1.getLatLng();
+                var marker2coords = marker2.getLatLng();
+                
+                travel[i] = L.polyline([marker1coords, marker2coords]).addTo(map);
+            }
+        }catch(error){
+            if (error instanceof TypeError) {
+                alert('Load the waypoints first by clicked "Saved"');
+            } else {
+                alert('An unexpected error occurred');
+            }
         }
+        
     }

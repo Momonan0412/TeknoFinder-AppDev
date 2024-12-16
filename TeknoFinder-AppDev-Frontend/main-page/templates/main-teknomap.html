@@ -1,90 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <!-- Leaflet javascript-->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TeknoFinder - TeknoMap</title>
-	<link rel="stylesheet" href="../css/main-teknomap.css">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Anybody&display=swap" rel="stylesheet">
-	
-</head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<body>
-	<!-- Header Section -->
-	<header>
-		<div class="navbar">
-			<div>
-				<img src="../img/teknofinder-word.png" height="40px"/>
-			</div>
+        <link rel="stylesheet" href="../css/map.css">
+    </head>
 
-			<nav>
-				<ul>
-					<li><a href="../templates/main-home.html" class="hoverable">Home</a></li>
-					<li><a href="../templates/main-teknomap.html" class="current-page">TeknoMap</a></li>
-					<li><a href="../templates/main-confessions.html" class="hoverable">Confessions</a></li>
-					<li><a href="../templates/main-aboutus.html" class="hoverable">About Us</a></li>
-					<li><a href="../templates/main-contactus.html" class="hoverable">Contact Us</a></li>
-				</ul>
-			</nav>
+    <body>
+		<!-- sidebar -->
+        <div id="map_sidebar">
+            <img style="height: 80px; width: 80px;" src="../assets/teknofinder-logo.png">
+            <div id="top_half">
+                <div id="home" class="sidebar_button">
+                    <i style="font-size: 40px;" class="fas fa-home"></i>
+                    <p>Home</p>
+                </div>
+                <div id="navigator" class="sidebar_button">
+                    <i style="font-size: 40px;" class="fas fa-search"></i>
+                    <p>Search</p>
+                </div>
+                <div onclick="GetWaypoint()" class="sidebar_button">
+                    <i style="font-size: 40px;" class="fas fa-bookmark"></i>
+                    <p>Saved</p>
+                </div>
+                <div class="sidebar_button">
+                    <i style="font-size: 40px;" class="far fa-clock"></i>
+                    <p>Schedule</p>
+                </div>
+            </div>
 
-			<div class="profile">
-				<input type="checkbox" id="profile-menu-toggle" hidden>
-				<label for="profile-menu-toggle" class="profile-label">
-					<div class="profile-img">
-						<img src="../img/user-profile.jpg" alt="Profile">
-					</div>
-					<div class="profile-info">
-						<h3 id="student-username-label">fname + lname</h3>
-						<span id="student-number-label">stud_num/email</span>
-					</div>
-				</label>
+            <div id="bottom_half">
+                <div class="sidebar_button">
+                    <i style="font-size: 40px;" class="fa fa-user"></i>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+        
+		<!-- map -->
+        <div id="map"></div>
 
-				<div class="profile-menu">
-					<a href="../../profile-page/templates/profile-personal.html"><i class="fa fa-user"></i> View Profile</a>
-					<a href=""><i class="fa fa-cog"></i> Settings</a>
-					<a href="" class="log-out"><i class="fa fa-sign-out-alt"></i> Logout</a>
-				</div>
-			</div>
-		</div>
-	</header>
+		<!-- debug panel -->
+        <div id="debug_menu">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            
+                <label for="coordX">X coordinate: </label>
+                <input type="text" id="coordX" name="coordX">
+            
+                <label for="coordY">Y coordinate: </label>
+                <input type="text" id="coordY" name="coordY">
+            </div>
+            <button onclick="DeleteWaypoint()">test</button>
 
-	<!-- Footer Section -->
-	<footer>
-		<div class="footer-left-container">
-			<div class="flc-left-content">
-				<img src="../img/teknofinder-word-other.png" height="50px"/> <br/>
-				<button id="scrollToTopBtn">
-				  <i class="fa fa-chevron-up"></i> TOP
-				</button>
-				<p>© 2024 TeknoFinder. All rights reserved.</p>
-			</div>
-				
-			<div class="flc-right-content">
-				<h3>Product</h3>
-				<ul>
-					<li><a href="../templates/main-home.html">Overview</a></li>
-					<li><a href="#citu360" id="citu360Link">CIT-U 360</a></li>
-					<li><a href="../templates/main-teknomap.html">TeknoMap</a></li>
-					<li><a href="../templates/main-confessions.html">Confessions</a></li>
-				</ul>
-			</div>
-			  
-			<div class="flc-right-content">
-				<h3>Company</h3>
-				<ul>
-					<li><a href="../templates/main-aboutus.html">About Us</a></li>
-					<li><a href="../templates/main-contactus.html">Contact Us</a></li>
-				</ul>
-			</div>			
-		</div>
-		
-		<div class="footer-right-container"></div>
-	</footer>
-	
-	<script src="../../global js/jquery-3.7.1.min.js"></script>
-	<script src="../js/main-page.js" defer></script>
-</body>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span onclick="closeModal()" class="close">&times;</span>
+                    <label for="dropdown">Select your Destination:</label>
+                    <select id="dropdown">
+                        <option value="1">Computer Lab 101</option>
+                        <option value="2">Computer Lab 102</option>
+                        <option value="3">Computer Lab 103</option>
+                        <option value="4">Computer Lab 104</option>
+                        <option value="5">Computer Lab 105</option>
+                        <option value="6">Case Room</option>
+                        <option value="7">SMDTC</option>
+                        <option value="8">College of Computer Studies</option>
+                    </select>
+                    <button onclick="confirmSelection()">Confirm</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+
+    <script src="../js/map.js"></script>
 </html>
