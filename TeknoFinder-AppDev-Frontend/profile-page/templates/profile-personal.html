@@ -70,7 +70,7 @@
 					</div>
 
 					<!-- Profile Section --><!--like if student siya "Campus Member" mabutang ara if dili "Guest" nalang-->
-					<span class="identifier">{identifier} of Cebu Institute of Technology - University</span>
+					<span class="identifier">Cebu Institute of Technology - University</span>
 
 					<div class="identity-subcontent">
 						<div>
@@ -108,50 +108,51 @@
 							<div>
 								<span> STUDENT NO. </span>
 							</div>
-							<input value="{studentstatus}" disabled />
+							<input id="studentnumber" value="{studentstatus}" disabled />
 						</div>
 					
 						<div class="personal-info">
 							<div>
 								<span> FIRST NAME </span>
 							</div>
-							<input value="{firstname}" disabled />
+							<input id="studentfirstname" value="{firstname}" disabled />
 						</div>
 					
 						<div class="personal-info">
 							<div>
 								<span> LAST NAME </span>
 							</div>
-							<input value="{lastname}" disabled />
+							<input id="studentlastname" value="{lastname}" disabled />
 						</div>
 					
 						<div class="personal-info">
 							<div>
 								<span> CIT-U STUDENT </span>
 							</div>
-							<input value="{student status}" disabled />
+							<input id="studentstatus" value="{student status}" disabled />
 						</div>
 					
 						<div class="personal-info">
 							<div>
 								<span> PROGRAM </span>
 							</div>
-							<input value="{program}" disabled />
+							<input id="studentprogram" value="{program}" disabled />
 						</div>
 					
 						<div class="personal-info">
 							<div>
 								<span> YEAR LEVEL </span>
 							</div>
-							<input value="{yearlevel}" disabled />
+							<input id="studentyear" value="{yearlevel}" disabled />
 						</div>
-					
+						<!--
 						<div class="personal-info">
 							<div>
 								<span> STATUS LEVEL </span>
 							</div>
-							<input value="{statuslevel}" disabled />
+							<input id="studentnumber" value="{statuslevel}" disabled />
 						</div>
+					-->
 					</div>
 					
 
@@ -187,7 +188,9 @@
 	{% comment %} <script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../../main-page/js/main-page.js" defer></script> {% endcomment %}
 	-->
+	<script src="../../global js/jquery-3.7.1.min.js"></script>
 	<script src="../js/schedules.js"></script> 
+	<script src="../js/profile.js"></script> 
 	<script>
 		const tabButtons = document.querySelectorAll('.tab-btn');
 		const tabPanels = document.querySelectorAll('.tab-panel');
