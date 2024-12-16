@@ -81,38 +81,74 @@
 			<br/><br/><span> ◍ ◍ ◍ </span>
 		</div>
 	</section>	
-	
-	<section class="feature-section">
-		<div class="feature-boxes">
-			<div class="feature-box-one">
-				<div class="feature-info">
-					<div>
-						<h1>One-Click Authentication</h1>
-						<h1> ◍ ☉☉ </h1>
-						<p>Make login seamless with intuitive, user-friendly authentication that gets users where they need to be—fast and securely. No hassle, just quick, easy access for a better user experience.</p>
+
+	<div class="tab-container">
+		<div class="profile-tab-section">
+			<div class="tab-buttons">					
+				<button class="tab-btn active" data-tab="personal-info">Personal Information</button>
+				<button class="tab-btn" data-tab="saved-classroom">Saved Classroom</button>
+				<button class="tab-btn" data-tab="my-schedule" onclick = "openSchedule();">My Schedule</button>
+				<button class="tab-btn" data-tab="profile-settings">Profile Settings</button>
+			</div>
+
+			<div class="tab-content">
+				<div class="tab-panel active" id="personal-info">
+					<div class="feature-box-one feature-slider">
+						<div class="slider">
+							<img src="../img/feature-one-a.png" alt="Feature One Slide 1">
+							<img src="../img/feature-one-b.png" alt="Feature One Slide 2">
+							<img src="../img/feature-one-c.png" alt="Feature One Slide 3">
+							<img src="../img/feature-one-d.png" alt="Feature One Slide 4">
+						</div>
+						<div class="feature-info">
+							<h1>One-Click Authentication</h1>
+							<p>Make login seamless with intuitive, user-friendly authentication that gets users where they need to be—fast and securely.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="feature-box-two">
-				<div class="feature-info">
-					<div>
-						<h1>Essential Study Takeaways</h1>
-						<h1> ◍ ◍ ☉ </h1>
-						<p>Transform your learning experience with essential insights derived from quizzes and flashcards. Capture critical information and enhance your understanding effortlessly!</p>
+
+				<div class="tab-panel" id="saved-classroom">
+					<div class="feature-box-two feature-slider">
+						<div class="slider">
+							<img src="../img/feature-two-a.png" alt="Feature Two Slide 1">
+							<img src="../img/feature-two-b.png" alt="Feature Two Slide 2">
+						</div>
+						<div class="feature-info">
+							<h1>Essential Study Takeaways</h1>
+							<p>Capture critical information and enhance your understanding effortlessly!</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="feature-box-three">
-				<div class="feature-info">
-					<div>
-						<h1>Quiz and Flashcard Builder</h1>
-						<h1> ◍ ◍ ◍ </h1>
-						<p>Master any topic with custom flashcards and quizzes designed for effective learning. Create, review, and test your knowledge with ease!</p>
+
+				<div class="tab-panel" id="my-schedule">
+					<div class="feature-box-two feature-slider">
+						<div class="slider">
+							<img src="../img/feature-two-a.png" alt="Feature Two Slide 1">
+							<img src="../img/feature-two-b.png" alt="Feature Two Slide 2">
+						</div>
+						<div class="feature-info">
+							<h1>Essential Study Takeaways</h1>
+							<p>Capture critical information and enhance your understanding effortlessly!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-panel" id="profile-settings">
+					<div class="feature-box-two feature-slider">
+						<div class="slider">
+							<img src="../img/feature-two-a.png" alt="Feature Two Slide 1">
+							<img src="../img/feature-two-b.png" alt="Feature Two Slide 2">
+						</div>
+						<div class="feature-info">
+							<h1>Essential Study Takeaways</h1>
+							<p>Capture critical information and enhance your understanding effortlessly!</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-    </section>
+	</div>
+	
 	
 	<!-- Footer Section -->
 	<footer>
@@ -148,5 +184,32 @@
 	</footer>
 	
 	<script src="../js/landing-page.js" defer></script>
+	<script>
+		document.querySelectorAll('.feature-slider').forEach((slider) => {
+			let isPaused = false;
+			slider.addEventListener('mouseover', () => {
+				slider.querySelector('.slider').style.animationPlayState = 'paused';
+				isPaused = true;
+			});
+			slider.addEventListener('mouseout', () => {
+				slider.querySelector('.slider').style.animationPlayState = 'running';
+				isPaused = false;
+			});
+		});		
+
+		const tabButtons = document.querySelectorAll('.tab-btn');
+		const tabPanels = document.querySelectorAll('.tab-panel');
+
+		tabButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				tabButtons.forEach(btn => btn.classList.remove('active'));
+				tabPanels.forEach(panel => panel.classList.remove('active'));
+
+				button.classList.add('active');
+				const tabId = button.getAttribute('data-tab');
+				document.getElementById(tabId).classList.add('active');
+			});
+		});
+	</script>
 </body>
 </html>
