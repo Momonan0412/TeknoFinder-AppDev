@@ -20,13 +20,13 @@
         <div id="map_sidebar">
             <img style="height: 80px; width: 80px;" src="../assets/teknofinder-logo.png">
             <div id="top_half">
-                <div id="home" class="sidebar_button">
+                <div id="home" class="sidebar_button" onclick="window.location.href='../templates/main-home.html'">
                     <i style="font-size: 40px;" class="fas fa-home"></i>
                     <p>Home</p>
                 </div>
                 <div id="navigator" class="sidebar_button">
                     <i style="font-size: 40px;" class="fas fa-search"></i>
-                    <p>Search</p>
+                    <p>Navigate</p>
                 </div>
                 <div onclick="GetWaypoint()" class="sidebar_button">
                     <i style="font-size: 40px;" class="fas fa-bookmark"></i>
@@ -37,9 +37,10 @@
                     <p>Schedule</p>
                 </div>
             </div>
+			
 
             <div id="bottom_half">
-                <div class="sidebar_button">
+                <div class="sidebar_button" onclick="window.location.href='../../profile-page/templates/profile-personal.html'">
                     <i style="font-size: 40px;" class="fa fa-user"></i>
                     <p>Profile</p>
                 </div>
