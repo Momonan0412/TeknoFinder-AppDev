@@ -148,13 +148,13 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 25px;
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
     user-select: none;
-	padding-bottom: 250px;
+	padding-bottom: 300px;
 }
 
 .get-started-section .auth-nav {
@@ -208,6 +208,7 @@ header {
 	letter-spacing: 1.1px;
 	line-height: 1.2;
 	margin-bottom: 50px;
+	color: #601325;
 }
 
 .teknofinder-overview a:hover {
@@ -218,36 +219,98 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: -250px;
+	margin-top: -300px;
 }
 
-.target-audience {
+.highlighted {
+	display: flex;
+	background-color: #f6c302;
+	min-width: 450px;
+	max-width: 450px;
+	min-height: 520px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 40px;
+	color: #601325;
+	padding: 50px;
+	margin: 0px -55px;
+	border: 15px solid white;
+	box-shadow: 0 0 30px rgb(246,195,2, 0.6);
+	z-index: 10;
+}
+
+.highlighted img{ 
+	min-width: 170px;
+	min-height: 170px;
+	max-width: 170px;
+	max-height: 170px;
+	object-fit: cover;
+	border: 7px solid black;
+	border-radius: 50%;
+}
+
+.highlighted span{ 
+	color: black;
+	font-size: 22px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.highlighted h2{ 
+	color: black;
+	letter-spacing: 1.3px;
+	font-size: 34px;
+}
+
+.target-one {
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+}
+
+.target-three {
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+
+.target-one,
+.target-three {
+	min-width: 400px;
+	max-width: 400px;
+	margin: 40px;
+	color: white;
 	width: 80vw;
 	background:  #601325;
-	border-radius: 40px;
 	display: flex;
 	padding: 0px 30px;
     align-items: center;
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
 	margin-bottom: 60px;
+	padding: 50px;
+	border: 15px solid white;
+	box-shadow: 0 0 30px rgb(96,19,37, 0.6);
 }
 
-.target-audience .targets {
-	width: 30vw;
-	margin: 40px;
-	color: white;
-}
-
-.target-audience .targets img{
-	width: 150px;
-	height: 150px;
+.target-one img,
+.target-three img{
+	min-width: 150px;
+	min-height: 150px;
+	max-width: 150px;
+	max-height: 150px;
 	object-fit: cover;
-	border: 5px solid white;
+	border: 7px solid white;
 	border-radius: 50%;
 }
 
-.target-audience .targets h2{
+.target-one span,
+.target-three span{
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+.target-one h2,
+.target-three h2{
 	color: #f6c305;
 	letter-spacing: 1.3px;
 	font-size: 30px;
@@ -435,12 +498,10 @@ header {
 
 .testimony-info div span{
 	font-size: 40px;
-	//border: 1px solid blue;
 }
 
 .testimony-info div p{
 	font-size: 20px;
-	//border: 1px solid blue;
 	color: black;
 	line-height: 1;
 }
@@ -449,80 +510,6 @@ header {
 .testimony-box-two:hover .testimony-info {
     opacity: 1;
     visibility: visible;
-}
-
-footer {
-    color: white;
-	background-image: url('/static/landing-page/images/footer-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-	//width: ;
-	padding: 60px;
-	padding-left: 100px;
-	font-size: 20px;
-	user-select: none;
-	border-top: 2px solid white;
-}
-
-footer .footer-top {
-	font-size: 24px;
-	display: flex;
-    justify-content: center;
-    //align-items: center;
-    text-align: center;
-	flex-direction: row;
-	width: 80%;
-	//border: 1px solid yellow;
-}
-
-footer .footer-logo {
-	width: 30%;
-	//border: 1px solid blue;
-	text-align: left;
-	padding-top: 10px;
-}
-
-footer .footer-logo img{
-	width: 150px;
-}
-
-footer .footer-nav {
-	width: 70%;
-	//border: 1px solid blue;
-	display: flex;
-	justify-content: center;
-    text-align: center;
-	flex-direction: row;
-	line-height: 2;
-}
-
-footer .footer-nav .product-footer {
-	margin-right: 200px;
-}
-
-footer .footer-nav a{
-	text-decoration: none;
-	color: rgba(255, 255, 255, 0.5); 
-}
-
-footer .footer-nav a:hover{
-	color: #00FF7F; 
-}
-
-footer .footer-down button{
-	padding: 10px 20px;
-	border-radius: 20px;
-	font-weight: bold;
-	background-color: #00FF7F;
-	border: none;
-	margin-bottom: 20px;
-}
-
-footer .footer-down button:hover{
-	border: 2px solid #00FF7F;
-	background-color: black;
-	color: #00FF7F;
-	cursor: pointer;
 }
 
 footer .footer-down button i{
