@@ -16,17 +16,16 @@
     </head>
 
     <body>
-		<!-- sidebar -->
         <div id="map_sidebar">
             <img style="height: 80px; width: 80px;" src="../assets/teknofinder-logo.png">
             <div id="top_half">
-                <div id="home" class="sidebar_button" onclick="window.location.href='../templates/main-home.html'">
+                <div id="home" class="sidebar_button">
                     <i style="font-size: 40px;" class="fas fa-home"></i>
                     <p>Home</p>
                 </div>
-                <div id="navigator" class="sidebar_button">
+                <div id="navigator" class="sidebar_button" onclick=" openModal()">
                     <i style="font-size: 40px;" class="fas fa-search"></i>
-                    <p>Navigate</p>
+                    <p>Search</p>
                 </div>
                 <div onclick="GetWaypoint()" class="sidebar_button">
                     <i style="font-size: 40px;" class="fas fa-bookmark"></i>
@@ -37,20 +36,16 @@
                     <p>Schedule</p>
                 </div>
             </div>
-			
 
             <div id="bottom_half">
-                <div class="sidebar_button" onclick="window.location.href='../../profile-page/templates/profile-personal.html'">
+                <div class="sidebar_button">
                     <i style="font-size: 40px;" class="fa fa-user"></i>
                     <p>Profile</p>
                 </div>
             </div>
         </div>
         
-		<!-- map -->
         <div id="map"></div>
-
-		<!-- debug panel -->
         <div id="debug_menu">
             <div>
                 <label for="name">Name:</label>
@@ -63,23 +58,23 @@
                 <input type="text" id="coordY" name="coordY">
             </div>
             <button onclick="DeleteWaypoint()">test</button>
+        </div>
 
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span onclick="closeModal()" class="close">&times;</span>
-                    <label for="dropdown">Select your Destination:</label>
-                    <select id="dropdown">
-                        <option value="1">Computer Lab 101</option>
-                        <option value="2">Computer Lab 102</option>
-                        <option value="3">Computer Lab 103</option>
-                        <option value="4">Computer Lab 104</option>
-                        <option value="5">Computer Lab 105</option>
-                        <option value="6">Case Room</option>
-                        <option value="7">SMDTC</option>
-                        <option value="8">College of Computer Studies</option>
-                    </select>
-                    <button onclick="confirmSelection()">Confirm</button>
-                </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <label for="dropdown">Select your Destination:</label>
+                <select id="dropdown">
+                    <option value="1">Computer Lab 101</option>
+                    <option value="2">Computer Lab 102</option>
+                    <option value="3">Computer Lab 103</option>
+                    <option value="4">Computer Lab 104</option>
+                    <option value="5">Computer Lab 105</option>
+                    <option value="6">Case Room</option>
+                    <option value="7">SMDTC</option>
+                    <option value="8">College of Computer Studies</option>
+                </select>
+                <button onclick="confirmSelection()">Confirm</button>
             </div>
         </div>
         

@@ -24,7 +24,7 @@ body {
 }
 
 #debug_menu{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100px;
 }
@@ -58,4 +58,57 @@ body {
 
 .sidebar_button:hover{
     background-color: rgba(246, 195, 2, 0.2);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto; /* Adjust the width to fit content */
+    max-width: 500px; /* Max width */
+    border-radius: 8px; /* Optional rounded corners */
+    position: absolute; /* Absolute position relative to the modal */
+    top: 50%; /* Center it vertically in the modal */
+    left: 20%; /* Place it to the right of the modal's left edge */
+    transform: translateY(-50%); /* Adjust the vertical positioning */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; /* Position it relative to modal-content */
+    right: 10px; /* Position it on the right side */
+    top: 10px; /* Position it on the top side */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal body for content */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
